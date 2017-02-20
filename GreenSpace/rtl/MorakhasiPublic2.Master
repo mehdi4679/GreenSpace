@@ -1,0 +1,334 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MorakhasiPublic2.master.cs" Inherits="Taxi.rtl.MorakhasiPublic2" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>سامانه مرخصی و پذیرش تاکسیرانی قم</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="/App_Themes/MyThem/WebFonts.css" rel="stylesheet" />
+     <link rel="icon" href="images/favicon.png" sizes="48x48" type="image/png"/>
+    <link href="/rtl/css/bootstrap.css" rel="stylesheet" />
+    <link href="/rtl/css/bootstrap.rtl.css" rel="stylesheet" />
+    <link href="/css/persianDatepicker-dark.css" rel="stylesheet" type="text/css" />
+    <link href="/rtl/css/theme.css" rel="stylesheet" />
+    <link href="/App_Themes/Theme1/Theme1/lightbox.css" rel="stylesheet" type="text/css" />
+    <link href="/App_Themes/Theme1/Theme1/Gridstyle.css" rel="stylesheet" type="text/css" />
+    <link href="/App_Themes/MyThem/gv.css" rel="stylesheet" type="text/css" />
+    <link href="/rtl/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+       <link href="/App_Themes/gv.css" rel="stylesheet" type="text/css" />
+    <link href="/App_Themes/MyThem/MyCss.css" rel="stylesheet" />
+
+    <link href="/App_Themes/MyThem/AutoComplete/jquery-ui.css"
+        rel="stylesheet" type="text/css" />
+    <%--<link href="/App_Themes/MyThem/upload/uploadify.css" rel="stylesheet" type="text/css" />
+          <script type="text/javascript" src="/Script/jquery-1.4.1.min.js"></script>
+        --%> <%--<script src="/ckeditor/ckeditor.js" type="text/javascript"></script>--%>
+    <script type="text/javascript" src="/rtl/js/jquery-1.11.1.min.js"></script>
+     <%--  <script type="text/javascript" src="/ckeditor/ckeditor.js"></script>--%>
+    <script src="/Script/persianDatepicker.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Script/json2.js"></script>
+    <script type="text/javascript" src="/Script/GV_Pager.min.js"></script>
+     <script src="/App_Themes/MyThem/AutoComplete/jquery-ui.js"
+        type="text/javascript"></script>
+    <script type="text/javascript" src="/js/jquery.price_format.2.0.min.js"></script>
+   
+    
+    <style type="text/css">
+         .fieldsettt{
+            margin:15px; 
+        }
+        /*table tr td {
+        height:37px;
+        }*/
+          fieldset {
+            background: linear-gradient(#f0efef, #ffffff 70%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+            border: 1px solid #d2d2d2;
+            border-radius: 5px;
+            box-shadow: 0.2em 0.2em 0.25em #cccccc;
+            clear: both;
+            color: #222;
+            direction: rtl;
+            margin-top: 15px;
+            padding-top: 25px;
+            position: relative;
+            text-align: right;
+        }
+             legend  {
+            background: linear-gradient(#86b9eb, #b5d6f7 70%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            box-shadow: 0.1em 0.1em 0.25em #888888;
+            font-weight: normal !important;
+            position: absolute;
+            right: 20px;
+            top: -14px;
+            width:auto;
+        }
+        #ui-id-1{
+                left: 285.2px;
+    top: 238.75px;
+    width: 759px;
+    z-index: 9999999;
+        
+        }
+        .ADelete
+        {
+            background-image: url(/App_Themes/Theme1/images/delete.png);
+            cursor: pointer;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+        }
+        .msg {
+     background: none repeat scroll 0 0 #cee7ed;
+    clear: both;
+    cursor: pointer;
+    display: none;
+    line-height: 25px;
+    margin: 3px 0;
+    min-height: 30px;
+    padding: 5px 20px;
+    text-align: center;
+    border-radius:5px;
+    
+}
+        .warning {
+        color:red;
+        }
+        .AClose
+        {
+            background-image: url(images/x.png);
+            cursor: pointer;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+        }
+        .AEnter
+        {
+            background-image: url(images/My-Documents.png);
+            cursor: pointer;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+        }
+        .ADoc
+        {
+            background-image: url(images/My-Documents.png);
+            cursor: pointer;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+        }
+        .APass
+        {
+            background-image: url(images/Pass.png);
+            cursor: pointer;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+        }
+        .Acredit
+        {
+            background-image: url(images/coint.jpg);
+            cursor: pointer;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+        }
+        .AcreditUnDirect
+        {
+            background-image: url(images/Dollar-icon.png);
+            cursor: pointer;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+        }
+        .Atrue
+        {
+            background-image: url(/App_Themes/Theme1/images/true.gif);
+            cursor: pointer;
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+             margin-right:15px;
+        }
+        .Afalse
+        {
+            background-image: url(/App_Themes/Theme1/images/false.gif);
+            cursor: pointer;
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-right:15px;
+        }
+
+                .AEdit
+        {
+            background-image: url(/App_Themes/Theme1/images/edit.png);
+            cursor: pointer;
+            display: inline-block;
+            width: 24px;
+            
+
+            height: 24px;
+        }
+        .AAccess {
+            background-image: url(/App_Themes/Theme1/images/Pass.png);
+            cursor: pointer;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+        }
+        .body {
+        
+        font-family:'Mitra',Tahoma,arial,sans-serif;font-size: 16px;
+        }
+        ul li a { font-family: 'Mitra',Tahoma,arial,sans-serif;font-size: 16px; }
+        span {    font-family: 'Mitra',Tahoma,arial,sans-serif;font-size: 16px;    }
+    </style>
+</head>
+<body class=" theme-blue"  style="background-color: #dfe0e2;font-family:'Mitra',Tahoma,arial,sans-serif;font-size: 16px;">
+    <div id="FilterDivForLightBox">
+    </div>
+    <form id="form1" runat="server">
+    <div class=" navbar-fixed-top" role="navigation" style="background:-moz-linear-gradient(center bottom , #efeff0 0%, #fafafa 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);background-color:#efeff0">
+        <div class="navbar-header">
+            <a class="" href="/MorakhasiPublic/RegVacation.aspx"><span class="navbar-brand" style="font-family:'mitrabold',Tahoma,arial,sans-serif;"><span class=" " style="font-family:'mitrabold',Tahoma,arial,sans-serif;" >
+            <span class="fa fa-cab"></span>  سامانه مرخصی و پذیرش تاکسیرانی قم  </span></a></div>
+      <asp:ContentPlaceHolder runat="server" ID="topMenuProfile">
+      
+      </asp:ContentPlaceHolder>
+    </div>
+        
+     
+
+        <div style="position:absolute ; left:20%;z-index:99999999;top:60%;width:60%;border:solid" class="msg  alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert">
+												<i class="ace-icon fa fa-times"></i>
+											</button>
+
+             <span runat="server" id="smsg" class="msg close_icon"  ></span>
+          
+        </div>  
+    <div class="container" style="margin-top: 45px">
+        <asp:ContentPlaceHolder runat="server" ID="subMaster">
+            <div class="headerMenu"   >
+         
+            <%--======top menu========--%>
+               <!-- Static navbar -->
+
+
+          
+
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li  ><a href="/MorakhasiPublic/RegVacation.aspx?Pname=تعریف دفاتر پیشخوان">ثبت مرخصی </a></li>
+              <li  runat="server" id="LiPaziresh"><a href="/MorakhasiPublic/Paziresh/PazireshPerson.aspx?Pname=پذیرش" >پذیرش </a></li>
+              <li  runat="server" id="Li1"><a href="/MorakhasiPublic/Paziresh/PazireshPerson.aspx?Pname=درخواست پروانه" >درخواست پروانه </a></li>
+  
+                <li><a href="#">گزارشات</a></li>
+           
+ <li><a href="#" runat="server" id="aexit" onserverclick="aexit_ServerClick">خروج</a></li>
+
+             <%-- <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">روزهای راننده <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+              
+
+              </ul>
+              </li>--%>
+    
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+          <%--=============--%>
+        </div>
+        </asp:ContentPlaceHolder>
+       
+        <div class="main-content">
+           
+            <div class="panel panel-default" style="margin-top:  5px">
+                <a href="#page-stats" class="panel-heading" data-toggle="collapse">
+             <table><tr><td>
+                 <asp:Label runat="server" ID="lblpageName" Text=""></asp:Label></td><td>
+                     </td></tr></table>   
+                </a>
+                <div id="page-stats" class="panel-collapse panel-body collapse in" >
+                    <div class="row" style="padding-right:5px;padding-left:5px;min-height:500px">
+                        
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </div>
+            <footer>
+               <div align="center" style=" text-align:center;font-family:'Mitra',Tahoma,arial,sans-serif;font-size:x-large;background-color:-moz-linear-gradient(center bottom , #efefef 0%, #fafafa 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);margin-top:-50px" >
+                سامانه نرم افزاری تاکسیرانی قم 
+                   <br /><br />
+                   شرکت نرم افزاری پارس رایانه
+                   <br /></br>© 2014-2015
+               
+               </div>
+<p></p>
+            </footer>
+        </div>
+    </div>
+    <script type="text/javascript" src="/rtl/js/bootstrap.js"></script>
+    <script src="/Script/AlmostafaScript.js" type="text/javascript"></script>
+       
+    <%--<script type="text/javascript" src="/Script/jquery.min.js"></script>
+       <script type="text/javascript" src="/rtl/js/jquery-1.11.1.min.js"></script> --%>
+    <%--  <script type="text/javascript" src="/rtl/js/bootstrap.rtl.js"></script> --%>
+    <%--<script src="/Script/jquery-1.4.1.min.js" type="text/javascript"></script>
+    --%>
+        <script>
+            $('.priceclass').priceFormat({
+                prefix: 'ریال',
+                centsLimit: 3,
+                centsSeparator: ',',
+            });
+
+
+            $('[data-rel=tooltip]').tooltip({ placement: 'left' });
+            $('[data-rel=popover]').popover({ html: true });
+
+            //$('input:text').tooltip();
+
+            function showMsg(status, text) {
+                var color = (status != 'warning') ? 'green' : 'red';
+                if (text == "err") { text = "بروز خطای نا مشخص.لطفا لحظاتی بعد مجددا سعی نمایید!"; }
+
+                $(".msg").addClass(status);
+                $(".msg").css('color', color);
+               
+                $(".msg").html( text);
+
+                $('html, body').animate({ scrollTop: '80px' }, 500, function () {
+                    $(".msg").fadeIn(800).css('display', 'block');
+                });
+
+                $(".msg").click(function () {
+                    $(".msg").fadeOut(800);
+                });
+                $(".msg").append("<a  class='close_icon'  title='بستن' ) ></a>");
+            }
+
+        </script>
+    </form>
+</body>
+</html>

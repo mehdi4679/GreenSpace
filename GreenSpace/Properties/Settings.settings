@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="GreenSpace.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="GreenSpace_SaraWebService_SrvShahrsaziGhom" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://esup.qom.ir/SrvQom/Services/SrvShahrsaziGhom.svc</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

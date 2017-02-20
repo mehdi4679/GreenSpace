@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="spDataSet" targetNamespace="http://tempuri.org/spDataSet.xsd" xmlns:mstns="http://tempuri.org/spDataSet.xsd" xmlns="http://tempuri.org/spDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="GreenCnn" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GreenCnn (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.GreenCnn.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="spDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="spDataSet" msprop:Generator_UserDSName="spDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="amalkerd" msprop:Generator_ColumnVarNameInTable="columnamalkerd" msprop:Generator_ColumnPropNameInRow="amalkerd" msprop:Generator_ColumnPropNameInTable="amalkerdColumn" msprop:Generator_UserColumnName="amalkerd" type="xs:string" minOccurs="0" />
+              <xs:element name="subjectname" msprop:Generator_ColumnVarNameInTable="columnsubjectname" msprop:Generator_ColumnPropNameInRow="subjectname" msprop:Generator_ColumnPropNameInTable="subjectnameColumn" msprop:Generator_UserColumnName="subjectname" type="xs:string" minOccurs="0" />
+              <xs:element name="khesata" msprop:Generator_ColumnVarNameInTable="columnkhesata" msprop:Generator_ColumnPropNameInRow="khesata" msprop:Generator_ColumnPropNameInTable="khesataColumn" msprop:Generator_UserColumnName="khesata" type="xs:string" minOccurs="0" />
+              <xs:element name="f4" msprop:Generator_ColumnVarNameInTable="columnf4" msprop:Generator_ColumnPropNameInRow="f4" msprop:Generator_ColumnPropNameInTable="f4Column" msprop:Generator_UserColumnName="f4" type="xs:string" minOccurs="0" />
+              <xs:element name="StatrtDateAgreement" msprop:Generator_ColumnVarNameInTable="columnStatrtDateAgreement" msprop:Generator_ColumnPropNameInRow="StatrtDateAgreement" msprop:Generator_ColumnPropNameInTable="StatrtDateAgreementColumn" msprop:Generator_UserColumnName="StatrtDateAgreement" type="xs:string" minOccurs="0" />
+              <xs:element name="EndDateAgreement" msprop:Generator_ColumnVarNameInTable="columnEndDateAgreement" msprop:Generator_ColumnPropNameInRow="EndDateAgreement" msprop:Generator_ColumnPropNameInTable="EndDateAgreementColumn" msprop:Generator_UserColumnName="EndDateAgreement" type="xs:string" minOccurs="0" />
+              <xs:element name="PriceAgreementYear" msprop:Generator_ColumnVarNameInTable="columnPriceAgreementYear" msprop:Generator_ColumnPropNameInRow="PriceAgreementYear" msprop:Generator_ColumnPropNameInTable="PriceAgreementYearColumn" msprop:Generator_UserColumnName="PriceAgreementYear" type="xs:string" minOccurs="0" />
+              <xs:element name="PeymanName" msprop:Generator_ColumnVarNameInTable="columnPeymanName" msprop:Generator_ColumnPropNameInRow="PeymanName" msprop:Generator_ColumnPropNameInTable="PeymanNameColumn" msprop:Generator_UserColumnName="PeymanName" type="xs:string" minOccurs="0" />
+              <xs:element name="PeymankarName" msprop:Generator_ColumnVarNameInTable="columnPeymankarName" msprop:Generator_ColumnPropNameInRow="PeymankarName" msprop:Generator_ColumnPropNameInTable="PeymankarNameColumn" msprop:Generator_UserColumnName="PeymankarName" type="xs:string" minOccurs="0" />
+              <xs:element name="FromDate" msprop:Generator_ColumnVarNameInTable="columnFromDate" msprop:Generator_ColumnPropNameInRow="FromDate" msprop:Generator_ColumnPropNameInTable="FromDateColumn" msprop:Generator_UserColumnName="FromDate" type="xs:string" minOccurs="0" />
+              <xs:element name="ToDate" msprop:Generator_ColumnVarNameInTable="columnToDate" msprop:Generator_ColumnPropNameInRow="ToDate" msprop:Generator_ColumnPropNameInTable="ToDateColumn" msprop:Generator_UserColumnName="ToDate" type="xs:string" minOccurs="0" />
+              <xs:element name="maarefi" msprop:Generator_ColumnVarNameInTable="columnmaarefi" msprop:Generator_ColumnPropNameInRow="maarefi" msprop:Generator_ColumnPropNameInTable="maarefiColumn" msprop:Generator_UserColumnName="maarefi" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

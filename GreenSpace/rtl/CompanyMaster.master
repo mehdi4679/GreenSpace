@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/rtl/TaxiMaster.Master" AutoEventWireup="true" CodeBehind="CompanyMaster.master.cs" Inherits="Taxi.rtl.CompanyMaster" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="topMenuProfile" runat="server">
+    <div runat="server"   id="dPerson" style="float: right;font-family:'mitrabold',Tahoma,arial,sans-serif;padding-right:10px " class="navbar-header">
+<ul class="nav">
+<li>
+<table class="tbmaster"><tr>
+ 
+<td>شرکت:</td><td><asp:Label runat="server" ID="lblCompanyName" Text='<%# Request.QueryString["cname"].ToString() %>'></asp:Label></td>
+<%--<td></td><td><asp:Label runat="server" ID="lblFulname"></asp:Label></td>
+    <td>شماره گواهینامه:</td><td><asp:Label runat="server" ID="lblgovahiname"></asp:Label></td>
+<td>وضعیت:</td><td><asp:Label runat="server" ID="lblactive"></asp:Label></td>
+<td>شماره پروانه:</td><td><asp:Label runat="server" ID="lblParvanehnumber"></asp:Label></td>
+<td>شماره همراه:</td><td><asp:Label runat="server" ID="lblmobile"></asp:Label></td>--%>
+
+
+</tr>
+<%--<tr>
+<td>خودروها:</td><td><asp:Label runat="server" ID="lblAllCars"></asp:Label></td>
+</tr>--%>
+</table>
+</li>
+</div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="subMaster" runat="server">
+ <div class="headerMenu">
+         
+            <%--======top menu========--%>
+               <!-- Static navbar -->
+
+
+          
+
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href='<%=Page.ResolveUrl("~/Company/CompanyProFile.aspx?cname="+Request.QueryString["cname"].ToString()+ "&cid=")+ Request.QueryString["cid"] %>'>شرکت </a></li>
+  
+ 
+                  <li><a href='<%=Page.ResolveUrl("~/Company/CompanyOwenr.aspx?cname="+Request.QueryString["cname"].ToString()+ "&cid=")+ Request.QueryString["cid"] %>'>مالکیت شرکت</a></li>
+            
+                  <li><a href='<%=Page.ResolveUrl("~/Company/CompanyViolation.aspx?cname="+Request.QueryString["cname"].ToString()+ "&cid=")+ Request.QueryString["cid"] %>'>ثبت تخلف</a></li>
+
+ 
+           <%--   <li><a href='<%=Page.ResolveUrl("~/Car/CarFish.aspx?CarID=")+ Request.QueryString["CarID"] %>'>ثبت فیش ها</a></li>
+              <li><a href='<%= Page.ResolveUrl("~/Car/CarAct.aspx?CarID=")+ Request.QueryString["CarID"] %>'>فعال /راکد</a></li>
+               --%>
+
+       
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+          <%--=============--%>
+        </div>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+       <asp:ContentPlaceHolder id="CompnayContent" runat="server" >
+
+</asp:ContentPlaceHolder>
+</asp:Content>

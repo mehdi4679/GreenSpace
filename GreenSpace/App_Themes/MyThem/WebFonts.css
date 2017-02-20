@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'mitra';
+    src: url('fonts/Mitra-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Mitra-webfont.woff') format('woff'),
+        url('fonts/Mitra-webfont.ttf') format('truetype'),
+        url('fonts/Mitra-webfont.svg#Mitra-webfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'mitrabold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/MitraBold-webfont.eot');
+    src: url('fonts/MitraBold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/MitraBold-webfont.woff') format('woff'),
+        url('fonts/MitraBold-webfont.ttf') format('truetype'),
+        url('fonts/MitraBold-webfont.svg') format('svg');
+}

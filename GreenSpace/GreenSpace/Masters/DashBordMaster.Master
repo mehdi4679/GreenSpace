@@ -1,0 +1,303 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DashBordMaster.Master.cs"
+    Inherits="Taxi.rtl.TaxiMaster" %>
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title> فضای سبز شهرداری قم</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+    <link href="/App_Themes/Theme1/Css/WebFonts.css" rel="stylesheet" />
+     <link rel="icon" href="images/favicon.png" sizes="48x48" type="image/png"/>
+    <link href="/App_Themes/Theme1/Css/bootstrap.css" rel="stylesheet" />
+    <link href="/App_Themes/Theme1/Css/bootstrap.rtl.css" rel="stylesheet" />
+    <link href="/App_Themes/Theme1/Css/persianDatepicker-dark.css" rel="stylesheet" type="text/css" />
+    <link href="/App_Themes/Theme1/Css/theme.css" rel="stylesheet" />
+    <link href="/App_Themes/Theme1/Css/lightbox.css" rel="stylesheet" type="text/css" />
+    <link href="/App_Themes/Theme1/Css/Gridstyle.css" rel="stylesheet" type="text/css" />
+    <link href="/App_Themes/Theme1/Css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+       <link href="/App_Themes/Theme1/Css/gv.css" rel="stylesheet" type="text/css" />
+    <link href="/App_Themes/Theme1/Css/MyCss.css" rel="stylesheet" />
+    <link href="/App_Themes/Theme1/Css/jquery-ui.css"        rel="stylesheet" type="text/css" />
+
+     
+           <script type="text/javascript" src="/App_Themes/Theme1/js/jquery-1.4.1.min.js"></script>
+    <script type="text/javascript" src="/App_Themes/Theme1/js/jquery-1.11.1.min.js"></script>
+    <script src="/App_Themes/Theme1/js/persianDatepicker.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/App_Themes/Theme1/js/json2.js"></script>
+    <script type="text/javascript" src="/App_Themes/Theme1/js/GV_Pager.min.js"></script>
+    <script type="text/javascript" src="/App_Themes/Theme1/js/jquery.price_format.2.0.min.js"></script>
+ <%--    <script src="/App_Themes/Theme1/js/jquery-ui.js"
+        type="text/javascript"></script>--%>
+    <style type="text/css">
+        .ADelete
+        {
+            background-image: url(/App_Themes/Theme1/images/delete.png);
+            cursor: pointer;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+        }
+        .displaynone {
+        display:none;
+        }
+
+        .msg {
+  background-color: #cdcdcd;
+    border-radius: 8px;
+    border-style: solid;
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+    display: block;
+    padding: 5px;
+    position: fixed;
+    top: 10%;
+    width: 80%;
+    z-index: 9999999;
+    right:18%;
+}
+        .warning {
+        color:red;
+        }
+        .AClose
+        {
+            background-image: url(images/x.png);
+            cursor: pointer;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+        }
+        .AEnter
+        {
+            background-image: url(images/My-Documents.png);
+            cursor: pointer;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+        }
+        .ADoc
+        {
+            background-image: url(images/My-Documents.png);
+            cursor: pointer;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+        }
+        .APass
+        {
+            background-image: url(images/Pass.png);
+            cursor: pointer;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+        }
+        .Acredit
+        {
+            background-image: url(images/coint.jpg);
+            cursor: pointer;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+        }
+        .AcreditUnDirect
+        {
+            background-image: url(images/Dollar-icon.png);
+            cursor: pointer;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+        }
+        .Atrue
+        {
+            background-image: url(/App_Themes/Theme1/images/true.gif);
+            cursor: pointer;
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+             margin-right:15px;
+        }
+        .Afalse
+        {
+            background-image: url(/App_Themes/Theme1/images/false.gif);
+            cursor: pointer;
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-right:15px;
+        }
+
+                .AEdit
+        {
+            background-image: url(/App_Themes/Theme1/images/edit.png);
+            cursor: pointer;
+            display: inline-block;
+            width: 24px;
+            
+
+            height: 24px;
+        }
+        .AAccess {
+            background-image: url(/App_Themes/Theme1/images/Pass.png);
+            cursor: pointer;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+        }
+        .body {
+        
+        font-family:'Mitra',Tahoma,arial,sans-serif;font-size: 16px;
+        }
+        ul li a { font-family: 'Mitra',Tahoma,arial,sans-serif;font-size: 16px; }
+        span {    font-family: 'Mitra',Tahoma,arial,sans-serif;font-size: 16px;    }
+    </style>
+</head>
+<body class=" theme-blue"  style="background-color: #dfe0e2;font-family:'Mitra',Tahoma,arial,sans-serif;font-size: 16px;">
+    <div id="FilterDivForLightBox">
+    </div>
+    <form id="form1" runat="server">
+    <div class=" navbar-fixed-top" role="navigation" style="background:-moz-linear-gradient(center bottom , #efeff0 0%, #fafafa 100%) repeat scroll 0 0 rgba(0, 0, 0, 0)">
+        <div class="navbar-header">
+            <a class="" href="/dashboard.aspx"><span class="navbar-brand" style="font-family:'mitrabold',Tahoma,arial,sans-serif;"><span class="green" style="font-family:'mitrabold',Tahoma,arial,sans-serif" >
+            <span class="fa fa-leaf green"></span> سامانه فضای سبز شهرداری قم</span></a></div>
+      <asp:ContentPlaceHolder runat="server" ID="topMenuProfile">
+      
+      </asp:ContentPlaceHolder>
+    </div>
+    <div class="sidebar-nav" style="position: fixed;font-family:'mitrabold',Tahoma,arial,sans-serif;font-family:'mitrabold',Tahoma,arial,sans-serif;">
+        <ul>
+            <li><a href="/DashBoard.aspx?pname=میز کار" class="nav-header"><i class="fa fa-fw fa-dashboard">
+            </i>میز کار</a></li>
+             
+              
+            <li><a href="#" data-target=".legal-catalog" class="nav-header collapsed" data-toggle="collapse">
+                <i class="fa fa-fw fa-info"></i>اطلاعات پیش فرض<i class="fa fa-collapse"></i></a></li>
+                       <li>
+                <ul class="legal-catalog nav nav-list collapse">
+                    <li><a href="/Manage/Catalog.aspx?pname=اطلاعات اولیه سیستمی"><span class="fa fa-caret-left"></span>اطلاعات اولیه سیستمی</a></li>
+                      <li><a href="/Manage/Park.aspx?pname=پارک ها"><span class="fa fa-caret-left"></span>پارک ها</a></li>
+                      <li><a href="/Manage/Peyman.aspx?pname=پیمان ها"><span class="fa fa-caret-left"></span>پیمان ها</a></li>
+                      <li><a href="/Manage/pppp.aspx?pname=پارک های پیمان"><span class="fa fa-caret-left"></span>پارک های پیمان</a></li>
+
+                    <li><a href="/Manage/Explain.aspx?pname=شرح کار"><span class="fa fa-caret-left"></span>شرح کار</a></li>
+                  <li><a href="/Manage/Area.aspx?pname=عرصه"><span class="fa fa-caret-left"></span>عرصه</a></li>
+                    <li><a href="/Manage/DefaultRepeat.aspx?pname=تکرارهای پیش فرض"><span class="fa fa-caret-left"></span>تکرارهای پیش فرض</a></li>
+                    <li><a href="/Manage/Khesarat.aspx?pname=جدول خسارت ها"><span class="fa fa-caret-left"></span>جدول خسارتها </a></li>
+
+                </ul>
+            </li>
+    <li><a href="#" data-target=".legal-ashjar" class="nav-header collapsed" data-toggle="collapse">
+                <i class="fa fa-fw fa-tree"></i>قطع اشجار<i class="fa fa-collapse"></i></a></li>
+                       <li>
+                <ul class="legal-ashjar nav nav-list collapse">
+                               <li><a href= "/Manage/Tree/CuttingTree.aspx"><span class="fa fa-caret-left"></span>قطع درخت </a></li>
+                             <li><a href= "/Manage/Tree/LicensingTree.aspx"><span class="fa fa-caret-left"></span>مجوز درخت </a></li>
+                    <li><a href= "/Manage/Tree/Sakhtikar.aspx"><span class="fa fa-caret-left"></span>سختی کار</a></li>
+                      <li><a href= "/Manage/Tree/Negahdari.aspx"><span class="fa fa-caret-left"></span>نگهداری یک ساله</a></li>
+                      <li><a href= "/Manage/Tree/AbBaha.aspx"><span class="fa fa-caret-left"></span>آب بها</a></li>
+                      <li><a href= "/Manage/Tree/AgeCalculation.aspx"><span class="fa fa-caret-left"></span>سن درخت</a></li>
+
+                    <li><a href= "/Manage/Tree/ArzeshBasari.aspx"><span class="fa fa-caret-left"></span>ارزش بصری</a></li>
+                  <li><a href= "/Manage/Tree/KambodSaraneh.aspx"><span class="fa fa-caret-left"></span>کمبود سرانه منطقه</a></li>
+                    <li><a href= "/Manage/Tree/EcoTorism.aspx"><span class="fa fa-caret-left"></span>اکو توریسم</a></li>
+                    <li><a href= "/Manage/Tree/MahsolDaramad.aspx"><span class="fa fa-caret-left"></span>درآمد حاصل از محصول </a></li>
+ <li><a href= "../Manage/Tree/Personels.aspx"><span class="fa fa-caret-left"></span>افراد حقیقی </a></li>
+                </ul>
+            </li>
+            
+               
+              <li><a href="#" data-target=".Agree-menu" class="nav-header collapsed" data-toggle="collapse">
+                <i class="fa fa-fw fa-money"></i>قراردادها<i class="fa fa-collapse"></i></a></li>
+            <li>
+                <ul class="Agree-menu nav nav-list collapse">
+                    <li><a href="/Manage/Agreement.aspx?pname=انعقاد قرارداد"><span class="fa fa-caret-left"></span>انعقاد قرارداد</a></li>
+ 
+                    </ul>
+                </li> 
+            
+ 
+                      
+            <li><a href="#" data-target=".legal-menu" class="nav-header collapsed" data-toggle="collapse">
+                <i class="fa fa-fw fa-users"></i>کاربران<i class="fa fa-collapse"></i></a></li>
+            <li>
+                <ul class="legal-menu nav nav-list collapse">
+                    <li><a href="/user/User.aspx?pname=کاربر"><span class="fa fa-caret-left"></span>کاربر</a></li>
+                      <%--<li><a href="/User/PermissionPack.aspx"><span class="fa fa-caret-left"></span>دسترسی های نقش</a></li>
+                      <li><a href="/User/USerPerMission.aspx"><span class="fa fa-caret-left"></span>دسترسی های کاربر</a></li>--%>
+
+                </ul>
+            </li>
+                               <li><a href="/Report/Rep_Dashbord.aspx"  class="nav-header" ><i class="ace-icon fa fa-file-pdf-o"></i>گزارشات  </a></li>
+
+            <li><a href="/logout.aspx"  class="nav-header" ><i class="ace-icon fa fa-power-off"></i>خروج </a></li>
+          
+        </ul>
+    </div>
+        <div  style=" display: none" class="msg"> <span runat="server" id="smsg" class="msg"  ></span></div>  
+    <div class="content" style="margin-top: 45px">
+        <asp:ContentPlaceHolder runat="server" ID="subMaster">
+        </asp:ContentPlaceHolder>
+       
+        <div class="main-content">
+           <asp:ContentPlaceHolder runat="server" ID="contectMenuHo">
+
+           </asp:ContentPlaceHolder>
+            <div class="panel panel-default" style="margin-top:  5px">
+                <a href="#page-stats" class="panel-heading" data-toggle="collapse">
+             <table><tr><td>
+                 <asp:Label runat="server" ID="lblpageName" Text=""></asp:Label></td><td>
+                     </td></tr></table>   
+                </a>
+                <div id="page-stats" class="panel-collapse panel-body collapse in" >
+                    <div class="row" style="padding-right:5px;padding-left:5px">
+                        
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </div>
+            <footer>
+               <div align="center" style=" text-align:center;font-family:'Mitra',Tahoma,arial,sans-serif;font-size:x-large;background-color:-moz-linear-gradient(center bottom , #efefef 0%, #fafafa 100%) repeat scroll 0 0 rgba(0, 0, 0, 0)" >
+                سامانه فضای سبز شهرداری قم </br></br>© 2014-2015
+               
+               </div>
+<p></p>
+            </footer>
+        </div>
+    </div>
+    <script type="text/javascript" src="/App_Themes/Theme1/js/bootstrap.js"></script>
+    <script src="/App_Themes/Theme1/js/AlmostafaScript.js" type="text/javascript"></script>
+       
+ 
+        <script>
+            $(document).ready(function () {
+
+                $('input:text').tooltip();
+            });
+            function showMsg(status, text) {
+                var color = (status != 'warning') ? 'green' : 'red';
+                if (text == "err") { text = "بروز خطای نا مشخص.لطفا لحظاتی بعد مجددا سعی نمایید!"; }
+
+                $(".msg").addClass(status);
+                $(".msg").css('color', color);
+                $(".msg").html(text);
+
+                $('html, body').animate({ scrollTop: '80px' }, 500, function () {
+                    $(".msg").fadeIn(800).css('display', 'block');
+                });
+
+                $(".msg").click(function () {
+                    $(".msg").fadeOut(800);
+                });
+            }
+            $('.priceclass').priceFormat({
+                 prefix: 'ریال',
+                centsLimit: 3,
+                centsLimit: 0
+            });
+        </script>
+    </form>
+</body>
+</html>

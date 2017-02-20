@@ -1,0 +1,91 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainMaster.master.cs" Inherits="Taxi.rtl.MainMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <meta name="description" content="Qom Taxi" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+  
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <link rel="icon" href="images/favicon.png" sizes="48x48" type="image/png"/>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png"/>
+    <link rel="stylesheet" href="/App_Themes/Theme1/Css/bootstrap.min.css" />
+    <link href="/App_Themes/Theme1/Css/ace.min.css" rel="stylesheet" />
+    <link href="/App_Themes/Theme1/Css/Font/font-awesome.min.css" rel="stylesheet" />
+    <link href="/App_Themes/Theme1/Css/WebFonts.css" rel="stylesheet" />
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <script src="/App_Themes/Theme1/js/jquery.min.js"></script>
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------->
+        
+    
+    <style>
+        
+        .msg {
+  background-color: #cdcdcd;
+    border-radius: 8px;
+    border-style: solid;
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+    display: block;
+    padding: 5px;
+    position: fixed;
+    top: 10%;
+    width: 80%;
+    z-index: 9999999;
+    right:18%;
+}
+        .warning {
+        color:red;
+        }
+        .AClose
+        {
+            background-image: url(images/x.png);
+            cursor: pointer;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="HeadContentPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="no-skin rtl" >
+    <form id="MainMasterform" runat="server" >
+                <div  style=" display: none" class="msg"> <span runat="server" id="smsg" class="msg"  ></span></div>  
+
+        <div>
+            <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server">
+
+
+
+
+            </asp:ContentPlaceHolder>
+        </div>
+        <script>
+            function showMsg(status, text) {
+                var color = (status != 'warning') ? 'green' : 'red';
+                if (text == "err") { text = "بروز خطای نا مشخص.لطفا لحظاتی بعد مجددا سعی نمایید!"; }
+
+                $(".msg").addClass(status);
+                $(".msg").css('color', color);
+                $(".msg").html(text);
+
+                $('html, body').animate({ scrollTop: '80px' }, 500, function () {
+                    $(".msg").fadeIn(800).css('display', 'block');
+                });
+
+                $(".msg").click(function () {
+                    $(".msg").fadeOut(800);
+                });
+            }
+
+        </script>
+    </form>
+</body>
+</html>
+

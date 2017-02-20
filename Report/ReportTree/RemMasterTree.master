@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Masters/DashBordMaster.Master" AutoEventWireup="true" CodeBehind="RemMasterTree.master.cs" Inherits="GreenSpace.Report.ReportTree.RemMasterTree" %>
+<asp:Content runat="server" ContentPlaceHolderID="topMenuProfile" ID="ppp" >
+   
+     <div runat="server"   id="dPerson" style="float: right;font-family:'mitrabold',Tahoma,arial,sans-serif;padding-right:10px " class="navbar-header">
+<ul class="nav">
+<li>
+ <h3><span style="font-family:'mitrabold'"">گزارشات</span> </h3>
+</li>
+</div>
+   
+<%--<asp:Label runat="server" ID="lblPersonalID" Text="0" Visible="false"></asp:Label>--%>
+</asp:Content>
+
+<asp:Content ID="ccc" ContentPlaceHolderID="subMaster" runat="server" >
+     
+</asp:Content>
+ 
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <asp:ContentPlaceHolder runat="server" ID="chead"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="conthormenu" ContentPlaceHolderID="contectMenuHo" runat="server">
+    <nav role="navigation" class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand"></a>
+          </div>
+          <div class="navbar-collapse collapse" id="navbar">
+             
+<ul class="nav navbar-nav">
+    <li  ><a href= "License.aspx">مجوزات </a></li>
+      <li  ><a href="CuttingTree.aspx">قطع </a></li>
+
+
+
+
+
+    <%--<li  ><a href='<%= "/Agree/AgreePark.aspx?pname=قیمت ها  &aid="+Request.QueryString["aid"].ToString() %>'>پارک های قرارداد </a></li>
+              <li  ><a href='<%= "/Agree/AgreePark.aspx?pname=قیمت ها &District="+ Request.QueryString["District"].ToString() +"&aid="+Request.QueryString["aid"].ToString() %>'>پارک های قرارداد </a></li>
+              <li  ><a href='<%= "/Agree/AgreeArea.aspx?pname=عرصه&District="+ Request.QueryString["District"].ToString() +"&aid="+Request.QueryString["aid"].ToString() %>'>عرصه قرارداد </a></li>
+              <li  ><a href='<%= "/Agree/Repeat.aspx?pname=تکرارهای شرح کار &District="+ Request.QueryString["District"].ToString() +"&aid="+Request.QueryString["aid"].ToString() %>'>تکرارهای شرح کار </a></li>
+              <li ><a href='<%= "/Agree/Price.aspx?pname=قیمت ها&District="+ Request.QueryString["District"].ToString() +"&aid="+Request.QueryString["aid"].ToString() %>'  >قیمت ها </a></li>
+              <li  ><a href='<%= "/Agree/AgreeFine.aspx?pname=خسارت&District="+ Request.QueryString["District"].ToString() +"&aid="+Request.QueryString["aid"].ToString() %>'  >خسارت </a></li>
+ <li  ><a href='<%= "/Agree/AgreePercent.aspx?pname=درصدهای روزانه&District="+ Request.QueryString["District"].ToString() +"&aid="+Request.QueryString["aid"].ToString() %>' > درصدهای روزانه  </a></li>
+ <li  ><a href='<%= "/Agree/AgreeStatus.aspx?pname=وضعیت قرارداد&District="+ Request.QueryString["District"].ToString() +"&aid="+Request.QueryString["aid"].ToString() %>'  >وضعیت قرارداد </a></li>
+ <li  ><a href='<%= "/Agree/reportmonth.aspx?pname=گزارش عملکرد&District="+ Request.QueryString["District"].ToString() +"&aid="+Request.QueryString["aid"].ToString() %>' >گزارش عملکرد </a></li>--%>
+
+
+              
+                </ul>
+
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div id="PesonContetnt" dir="ltr" >
+ 
+        
+  <asp:ContentPlaceHolder ID="PesonContentPlaceHolder" runat="server" >
+          
+
+  </asp:ContentPlaceHolder>
+</div>
+  <script type="text/javascript" >
+      function clearinput() {
+          $('dic .Lightbox').find('input:text')
+        .each(function () {
+            $(this).val('');
+        });
+      }
+
+
+  </script>
+
+</asp:Content>

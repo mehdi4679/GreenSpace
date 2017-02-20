@@ -1,0 +1,206 @@
+﻿
+
+/*--------- reset ---------*/
+ 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,caption, tbody, tfoot, thead {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+ol, ul {
+  list-style: none;
+}
+body { font:75%/1.7em Tahoma, Arial, sans-serif;/* font-size 1em = 10px */ direction:rtl;}
+.body
+{
+    background: url('../../images/Student/bg2.png') top left repeat-x;
+    background-position: left top;
+    background-color: #efefef;
+    background: url('../../images/Student/bg2.png') top left repeat-x,url('../../images/Student/bg.gif') top right repeat;
+    
+}
+
+ 
+/* ---------- Main -----------*/
+.container
+{
+  width:100%;
+  margin: 0 auto;
+  display:table;
+  overflow:scroll; 
+}
+ 
+.header
+{
+	/*background-image:  url('../../images\Student\logo\header-main.png') ;*/
+	background-repeat: no-repeat ;
+	height:50px;
+	padding: 20px;
+
+
+}
+.Logo
+{
+    background-position: right;
+    background-image: url('../../images/Student/Logo.png');
+    width: 277px;
+    height: 53px;
+    background-repeat: no-repeat;
+}
+.logo_besmelah
+{
+        background-image: url('../../images/Student/logo/besmelah.png');background-repeat: no-repeat;width: 200px;height: 80px; position:absolute; left:650px;top:15px;
+        }
+.header h1 { text-align:left;}
+.header h1 a{ text-decoration:none; color:#09F;}
+.navigation
+{
+ float:right;
+ width:700px;
+  line-height:41px;
+}
+ 
+.navigation ul li
+{
+  float:right;
+}
+ 
+.navigation li a
+{
+  display: block;
+  height:41px;
+  padding:0 15px;
+  color:#555555;
+  text-decoration: none;
+  border-left: 1px solid #fff;
+}
+ 
+.navigation li a:hover {  background-image:url('../../images/Student/back_menu_a.png'); }
+ 
+.content
+{
+   width:1100px;
+   margin:0; display:table;  
+}
+ 
+.contentBody
+{
+ 
+    float: right;height: 300px;width: 100%;
+}
+ 
+.contentBody p { text-align:justify; line-height:17px;}
+ 
+.contentBody h2
+{
+  margin: 0 0 .5em;
+}
+ 
+.sideBar
+{
+ 
+    float: right;
+    padding: 10px;
+    width: 250px;
+}
+.sideBarleft
+{
+ 
+    float: left;padding: 10px; width: 250px;
+}
+.sideBar h3
+{
+  margin: 0 0 .5em;
+}
+
+
+.footer
+{
+	padding: 20px;
+	text-align: center;
+	background-image: url('../../images/Student/back_foother.png');
+	
+}
+/*=======================*/
+#right 
+{
+     width:100%;padding-top:3px
+  /*  float:left;
+     margin-left: 220px;*/
+}
+#right_top {
+    background: url("../../images/Student/page_top.gif") repeat;
+    height: 41px;
+     margin-left: 1px;
+}
+#right_middle {
+    /*background: url("../../images/Student/text_middle.gif") repeat ;*/
+}
+#right_bottom {
+    /*background: url("../../images/Student/text_bottom.gif") repeat ;*/
+    height: 13px;
+}
+#text
+{
+    direction  : rtl;
+    font: 11px/19px tahoma;
+    padding: 0 30px 10px;
+    text-align: justify;
+    min-height:350px;
+}
+#text>div
+{
+    background-color:#fafafa;
+    width:100%;
+    border-radius: 7px 7px 7px 7px;
+    border:1px solid #e3e3e3;
+
+}
+/*=======================*/
+
+
+.person
+{
+      left : 10px;
+      position: absolute ; 
+      top: 100px;    
+      width: 270px;
+}
+
+
+
+/*===============================*/
+.black_overlay{
+			display: none;
+			position: absolute;
+			top: 0%;
+			left: 0%;
+			width: 100%;
+			height: 100%;
+			background-color: black;
+			z-index:1001;
+			-moz-opacity: 0.8;
+			opacity:.80;
+			filter: alpha(opacity=80);
+		}
+		.white_content {
+			display: none;
+			position: absolute;
+			top: 25%;
+			left: 25%;
+			width: 50%;
+			height: 50%;
+			padding: 16px;
+			border: 16px solid  #cdcdcd;
+			background-color: white;
+			z-index:1002;
+			overflow: auto;
+		}

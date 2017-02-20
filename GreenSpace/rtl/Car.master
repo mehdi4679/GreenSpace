@@ -1,0 +1,106 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/rtl/TaxiMaster.Master" AutoEventWireup="true" CodeBehind="Car.master.cs" Inherits="Taxi.rtl.Car" %>
+<%@ Register src="~/rtl/CarTop.ascx" tagname="CtlCartop" tagprefix="uc1" %>
+<%@ Register Src="~/Controls/CtlTaxiSuggession.ascx" TagName="CtltaxiSugession" TagPrefix="uc2" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">  
+   <%-- <style>
+        .ui-autocomplete {
+        z-index:9999999999;
+
+        }
+
+    </style>--%>
+</asp:Content>
+<asp:Content ID="ccc" ContentPlaceHolderID="topMenuProfile" runat="server" >
+        
+    <uc1:CtlCartop ID="Ctlcartop1" runat="server" />
+                <asp:Label runat="server" ID="lblcarid" Text="0" Visible="false"></asp:Label>
+    <div id="dsuggestion" style=" position:relative;right:200px;width:500px">
+
+   <%-- <uc2:CtltaxiSugession ID="ctlsuggession" runat="server"  />--%>
+    </div>
+     
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="subMaster" runat="server">
+    <div class="headerMenu"   >
+         
+            <%--======top menu========--%>
+               <!-- Static navbar -->
+
+
+          
+
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li ><a href='<%=Page.ResolveUrl("~/Car/RegCar.aspx?pname=خودرو&CarID=")+ Request.QueryString["CarID"] %>'>خودرو </a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">تبدیل به احسن <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+              <li><a href='<%=Page.ResolveUrl("~/Car/CarConvert.aspx?pname=تبدیل به احسن&CarID=")+ Request.QueryString["CarID"] %>'>تبدیل به احسن</a></li>
+              <li><a href='<%=Page.ResolveUrl("~/Car/CarConvertView.aspx?pname=نمایش تبدیل های خودرو&CarID=")+ Request.QueryString["CarID"] %>'>نمایش تبدیل های خودرو</a></li>
+              </ul>
+              </li>
+
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">تعویض خط و پلاک<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+              <li><a href='<%=Page.ResolveUrl("~/Car/Pelak.aspx?pname=تعویض پلاک&CarID=")+ Request.QueryString["CarID"] %>'>تعویض پلاک</a></li>
+              <li><a href='<%=Page.ResolveUrl("~/Car/CarType.aspx?pname=تعویض خط&CarID=")+ Request.QueryString["CarID"] %>'>تعویض خط</a></li>
+              <li><a href='<%=Page.ResolveUrl("~/Car/Carcode.aspx?pname=تعویض کد&CarID=")+ Request.QueryString["CarID"] %>'>تعویض کد</a></li>
+
+              </ul>
+              </li>
+              
+
+                 <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">مالکیت خودرو<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+               <li><a href="<%=Page.ResolveUrl("~/Car/CarPerson.aspx?pname=اختصاص فرد به خودرو&CarID=")+ Request.QueryString["CarID"] %>"">اختصاص فرد به خودرو</a></li>
+               <li><a href="<%=Page.ResolveUrl("~/Car/CarSale.aspx?pname=فروش خودرو&CarID=")+ Request.QueryString["CarID"] %>"">فروش خودرو</a></li></ul>
+               </li>
+            
+                  <li><a href='<%=Page.ResolveUrl("~/Car/CarViolation.aspx?pname=ثبت تخلف&CarID=")+ Request.QueryString["CarID"] %>'>ثبت تخلف</a></li>
+
+               
+<%--
+              <li><a href='<%=Page.ResolveUrl("~/Car/CarFish.aspx.aspx?CarID=")+ Request.QueryString["CarID"] %>'>فرد خودرو</a></li>
+--%>
+              <li><a href='<%=Page.ResolveUrl("~/Car/CarFish.aspx?pname=ثبت فیش ها&CarID=")+ Request.QueryString["CarID"] %>'>ثبت فیش ها</a></li>
+              <li><a href='<%= Page.ResolveUrl("~/Car/CarAct.aspx?pname=فعال /راکد&CarID=")+ Request.QueryString["CarID"] %>'>فعال /راکد</a></li>
+               
+
+      <%--        <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>--%>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+          <%--=============--%>
+        </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <asp:ContentPlaceHolder id="CarContent" runat="server" >
+
+</asp:ContentPlaceHolder>
+</asp:Content>

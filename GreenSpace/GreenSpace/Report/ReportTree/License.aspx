@@ -1,0 +1,40 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Report/ReportTree/RemMasterTree.master" AutoEventWireup="true" CodeBehind="License.aspx.cs" Inherits="GreenSpace.Report.ReportTree.License" %>
+
+<%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
+
+
+<%@ Register Src="~/Report/CtlFromDateToDate.ascx" TagPrefix="uc1" TagName="CtlFromDateToDate" %>
+
+
+<asp:Content ID="Content1" ContentPlaceHolderID="chead" runat="server">
+  
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="PesonContentPlaceHolder" runat="server">
+    <div>
+      
+            <table>
+                <tr>
+                    <td>نوع مجوز:</td>
+                    <td> <asp:DropDownList runat="server" ID="DDLicesnceTypeid"></asp:DropDownList></td>
+                </tr>
+                <tr>
+                     <td>منطقه:</td>
+                    <td> <asp:DropDownList runat="server" ID="DDMantagheId"></asp:DropDownList></td>
+                </tr>
+            </table>
+           
+        <uc1:CtlFromDateToDate runat="server" ID="CtlFromDateToDate" />
+  <%--      <asp:Button runat="server" ID="btnprint"  CssClass="DTTT_Print" Text="پرینت" OnClick="btnprint_Click" />--%>
+<asp:Button runat="server" ID="btnprint"  CssClass="DTTT_Print" Text="پرینت" OnClick="btnprint_Click1"  />
+        <%--<input type="button" name="btnprint"  Text="پرینت"  runat="server"   OnClick="btnprint_Click1" />--%>
+        <br />
+        
+
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <rsweb:ReportViewer ID="ReportViewer1" runat="server" Width="80%" Height="480%"></rsweb:ReportViewer>
+<%--    <rsweb:ReportViewer ID="ReportViewer1" runat="server" Width="80%" Height="80%"   ><rsweb:ReportViewer runat="server"></rsweb:ReportViewer>
+        </rsweb:ReportViewer>--%>
+
+    </div>
+</asp:Content>

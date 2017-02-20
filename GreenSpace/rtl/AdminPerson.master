@@ -1,0 +1,35 @@
+﻿
+<%@ Master Language="C#" MasterPageFile="~/rtl/TaxiMaster.Master" AutoEventWireup="true" CodeBehind="AdminPerson.master.cs" Inherits="Taxi.rtl.AdminPerson" %>
+<%@ Register src="CtlTopMenue.ascx" tagname="CtlTopMenue" tagprefix="uc1" %>
+<%@ Register src="CtlTopProfile.ascx" tagname="CtlTopProfile" tagprefix="uc1" %>
+
+<asp:Content runat="server" ContentPlaceHolderID="topMenuProfile" ID="ppp" >
+    <uc1:CtlTopProfile ID="CtlTopProfile1" runat="server" />
+<asp:Label runat="server" ID="lblPersonalID" Text="0" Visible="false"></asp:Label>
+</asp:Content>
+
+<asp:Content ID="ccc" ContentPlaceHolderID="subMaster" runat="server" >
+    <uc1:CtlTopMenue ID="CtlTopMenue1" runat="server" />
+</asp:Content>
+ 
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div id="PesonContetnt" dir="ltr" >
+  <asp:ContentPlaceHolder ID="PesonContentPlaceHolder" runat="server" >
+      
+
+  </asp:ContentPlaceHolder>
+  <script type="text/javascript" >
+      function clearinput() {
+          $('dic .Lightbox').find('input:text')
+        .each(function () {
+            $(this).val('');
+        });
+    }
+
+    
+  </script>
+</div>
+</asp:Content>

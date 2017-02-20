@@ -1,0 +1,47 @@
+﻿@font-face {
+    font-family: 'fontawesome-webfont';
+    src: url('../../App_Themes/Theme3/Font/fontawesome-webfont.eot') format('embedded-opentype'), url('../../App_Themes/Theme3/Font/fontawesome-webfont.svg') format('svg'), url('../../App_Themes/Theme3/Font/fontawesome-webfont.ttf') format('truetype'), url('../../App_Themes/Theme3/Font/fontawesome-webfont.woff') format('woff'), url('../../App_Themes/Theme3/Font/FontAwesome.otf') format('opentype');
+}
+@font-face {
+    font-family: 'W_YEKAN';
+    src: url('../../App_Themes/Theme3/Font/W_YEKAN.woff') format('woff'), url('../../App_Themes/Theme3/Font/W_YEKAN.eot') format('embedded-opentype'), url('../../App_Themes/Theme3/Font/W_YEKAN.otf') format('opentype'), url('../../App_Themes/Theme3/Font/W_YEKAN.svg') format('svg'), url('../../App_Themes/Theme3/Font/W_YEKAN.ttf') format('truetype');
+}
+.lbls {
+    font-family: W_YEKAN;
+    color: cadetblue;
+    font-size:18px;
+}
+.profile-info-name{
+    width:140px !important;
+    background:#EDF3F4;
+}
+.profile-user-info{
+    border: 1px solid #DCEBF7;
+}
+.semat{
+   font-family: W_yekan;
+    font-size: 17px;
+    color: white;
+    margin-right: -6px;
+    font-weight:100;
+}
+#home{
+    background:white;
+    padding-top:15px;
+}
+.label-xlg.arrowed-in-right:after{
+    border-width:11px 7px !important;
+}
+.label-xlg.arrowed-in-right:before{
+    border-width:11px 7px !important;
+}
+.form-control{
+    width:50% !important;
+}
+
+li{
+    border-style:none !important;
+}
+li a{
+    font-size:18px !important;
+}

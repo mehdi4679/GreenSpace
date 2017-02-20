@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://esup.qom.ir/SrvQom/Services/SrvShahrsaziGhom.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Biz.SaraServices.MessageContract" />
+  <xs:element name="GetSaraShahrsaziGhomInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pNosaziCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSaraShahrsaziGhomInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Biz.SaraServices.MessageContract" minOccurs="0" name="GetSaraShahrsaziGhomInfoResult" nillable="true" type="q1:ClsSaraSharsaziMessageGhom" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSaraFinanceGhomInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="year" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNosaziCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSaraFinanceGhomInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Biz.SaraServices.MessageContract" minOccurs="0" name="GetSaraFinanceGhomInfoResult" nillable="true" type="q2:ClsSaraFinanceMessageGhom" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAyanPrice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="year" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNosaziCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAyanPriceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Biz.SaraServices.MessageContract" minOccurs="0" name="GetAyanPriceResult" nillable="true" type="q3:ClsSaraSharsaziMessageGhom" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

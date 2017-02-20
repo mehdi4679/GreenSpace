@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E3F31E9F-2547-48D0-ADC6-313841510C8F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GreenSpaceDAL</RootNamespace>
+    <AssemblyName>GreenSpaceDAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbBahaClass.cs" />
+    <Compile Include="AgeCalculationClass.cs" />
+    <Compile Include="AgreeExplanPriceDAL.cs" />
+    <Compile Include="AgreeExplanRepeatDAL.cs" />
+    <Compile Include="AgreementBillDAL.cs" />
+    <Compile Include="AgreementDAL.cs" />
+    <Compile Include="AgreementFineDAL.cs" />
+    <Compile Include="AgreementPercentDAL.cs" />
+    <Compile Include="AgreePercentProtestDAL.cs" />
+    <Compile Include="AgreeStatusDAL.cs" />
+    <Compile Include="AreaDAL.cs" />
+    <Compile Include="ArzeshBasariClass.cs" />
+    <Compile Include="AttachDAL.cs" />
+    <Compile Include="Catalog.cs" />
+    <Compile Include="CatalogType.cs" />
+    <Compile Include="CuttingTreeClass.cs" />
+    <Compile Include="EkotorismClass.cs" />
+    <Compile Include="ExpalnParkDAL.cs" />
+    <Compile Include="ExplanPriceDAL.cs" />
+    <Compile Include="ExplanRepeatDAL.cs" />
+    <Compile Include="ExplanSubjectDAL.cs" />
+    <Compile Include="HaghighiClass.cs" />
+    <Compile Include="KambodSaranehClass.cs" />
+    <Compile Include="khesaratDAL.cs" />
+    <Compile Include="LicensingTreeClass.cs" />
+    <Compile Include="MahsolDaramadClass.cs" />
+    <Compile Include="NazarClass.cs" />
+    <Compile Include="NegahdariClass.cs" />
+    <Compile Include="PardakhtClass.cs" />
+    <Compile Include="ParkDAL.cs" />
+    <Compile Include="PermissionPackDAL.cs" />
+    <Compile Include="Personal.cs" />
+    <Compile Include="PeymanDAL.cs" />
+    <Compile Include="PeymanParkDAL.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sakhtikar.cs" />
+    <Compile Include="SubjectDAL.cs" />
+    <Compile Include="SupplycClass.cs" />
+    <Compile Include="TreeBonCutting.cs" />
+    <Compile Include="UserPermissionDAL.cs" />
+    <Compile Include="UserRoleDAL.cs" />
+    <Compile Include="Users.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GreenSpaceBLL\GreenSpaceBLL.csproj">
+      <Project>{3ea9d047-e35d-4ed2-b360-0b878c20a0dc}</Project>
+      <Name>GreenSpaceBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GreenSpaceCL\GreenSpaceCL.csproj">
+      <Project>{d8043cca-39b0-4974-96e1-e9445125723a}</Project>
+      <Name>GreenSpaceCL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

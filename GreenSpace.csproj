@@ -1,0 +1,2066 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{262E936F-7566-471E-A3EE-1B78F0B115A6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GreenSpace</RootNamespace>
+    <AssemblyName>GreenSpace</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.69.1.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SQLServer_Export_Excel\Bin\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SQLServer_Export_Excel\Bin\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 12.0\ReportViewer\Microsoft.ReportViewer.WebForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 12.0\ReportViewer\Microsoft.ReportViewer.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Agree\AgreeArea.aspx" />
+    <Content Include="Agree\AgreeFine.aspx" />
+    <Content Include="Agree\AgreePark.aspx" />
+    <Content Include="Agree\AgreePercent.aspx" />
+    <Content Include="Agree\AgreeStatus.aspx" />
+    <Content Include="Agree\Archive.aspx" />
+    <Content Include="Agree\ArchivView.aspx" />
+    <Content Include="Agree\ExplanRequest.aspx" />
+    <Content Include="Agree\Price.aspx" />
+    <Content Include="Agree\Repeat.aspx" />
+    <Content Include="Agree\ReportMonth.aspx" />
+    <Content Include="Agree\Rep_PriceExpaln.aspx" />
+    <Content Include="AjaxJS\Catalog.js" />
+    <Content Include="App_Themes\bootstrap-2.js" />
+    <Content Include="App_Themes\bootstrap.css" />
+    <Content Include="App_Themes\jquery-ui.css" />
+    <Content Include="App_Themes\jquery-ui.js" />
+    <Content Include="App_Themes\jquery.js" />
+    <Content Include="App_Themes\Theme1\Css\fonts\font-awesome.css" />
+    <Content Include="App_Themes\Theme1\Css\fonts\font-awesome.min.css" />
+    <Content Include="App_Themes\Theme1\Css\fonts\fontawesome-webfont.svg" />
+    <Content Include="App_Themes\Theme1\Css\fonts\Mitra-webfont.svg" />
+    <Content Include="App_Themes\Theme1\Css\Font\font-awesome.min.css" />
+    <Content Include="App_Themes\Theme1\Css\Font\fontawesome-webfont.svg" />
+    <Content Include="App_Themes\Theme1\Css\Font\New\FarMitraBold.svg" />
+    <Content Include="App_Themes\Theme1\Css\Font\New\font.css" />
+    <Content Include="App_Themes\Theme1\Css\images\004.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\005.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\006.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\007.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\Access.png" />
+    <Content Include="App_Themes\Theme1\Css\images\action_stop.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\Add.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\alt-hover.png" />
+    <Content Include="App_Themes\Theme1\Css\images\arrow_left.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\Attachment-32.png" />
+    <Content Include="App_Themes\Theme1\Css\images\attachment.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\back.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\backup2.png" />
+    <Content Include="App_Themes\Theme1\Css\images\bac_search.png" />
+    <Content Include="App_Themes\Theme1\Css\images\base-select.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\base.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\base.png" />
+    <Content Include="App_Themes\Theme1\Css\images\base1.png" />
+    <Content Include="App_Themes\Theme1\Css\images\bb.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\bbg1.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\bbg1.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\bbg2.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\bbg2_.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\bbg3.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\bbg5.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\bg.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\bg.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\bg2.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\bgtop.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\bgtop2.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\BG_2013.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\bl.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\bm.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\bottom.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\boxin.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\br.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\btn.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\btn_search.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\bt_close.png" />
+    <Content Include="App_Themes\Theme1\Css\images\bt_login.png" />
+    <Content Include="App_Themes\Theme1\Css\images\bt_open.png" />
+    <Content Include="App_Themes\Theme1\Css\images\bt_register.png" />
+    <Content Include="App_Themes\Theme1\Css\images\calender.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\cancel.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\cancel.png" />
+    <Content Include="App_Themes\Theme1\Css\images\chat.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\coint.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\collapse.png" />
+    <Content Include="App_Themes\Theme1\Css\images\collapsed.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\credite.png" />
+    <Content Include="App_Themes\Theme1\Css\images\darkok.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\date.png" />
+    <Content Include="App_Themes\Theme1\Css\images\delete.png" />
+    <Content Include="App_Themes\Theme1\Css\images\Dollar-icon.png" />
+    <Content Include="App_Themes\Theme1\Css\images\edit.png" />
+    <Content Include="App_Themes\Theme1\Css\images\expand.png" />
+    <Content Include="App_Themes\Theme1\Css\images\expanded.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\false.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\footer.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\g-header.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\g-header2.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\glossyback.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\glossyback2.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\GoToLeft.png" />
+    <Content Include="App_Themes\Theme1\Css\images\GoToRight.png" />
+    <Content Include="App_Themes\Theme1\Css\images\grad1.png" />
+    <Content Include="App_Themes\Theme1\Css\images\grad2.png" />
+    <Content Include="App_Themes\Theme1\Css\images\green_arrow.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\grid-alt.png" />
+    <Content Include="App_Themes\Theme1\Css\images\grid-header.png" />
+    <Content Include="App_Themes\Theme1\Css\images\grid-pgr.png" />
+    <Content Include="App_Themes\Theme1\Css\images\group.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\hbtn-add-r.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\hbtn-back-r.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\hbtn-blank.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\hbtn-delete-r.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\hbtn-ok-r.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\hbtn-print-r.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\hbtn-Report-r.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\hbtn-search-r.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\hbtn-upload-r.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\Header.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\Headline_left.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\Headline_left2.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\Headline_middle.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\Headline_middle2.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\Headline_right.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\Headline_right2.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\hmail.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\hmail2.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\icon.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\icon2.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\icon_search.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\indentbg.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\indentbg2.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\item-pointer-mover.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\item-pointer.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\Item_01.png" />
+    <Content Include="App_Themes\Theme1\Css\images\L.png" />
+    <Content Include="App_Themes\Theme1\Css\images\large_test.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\larglbox_header_title.png" />
+    <Content Include="App_Themes\Theme1\Css\images\larg_box_bot_l.png" />
+    <Content Include="App_Themes\Theme1\Css\images\larg_box_bot_r.png" />
+    <Content Include="App_Themes\Theme1\Css\images\lava.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\lava.png" />
+    <Content Include="App_Themes\Theme1\Css\images\lavalamp.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\linkarrow.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\lm.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\loading2.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\login.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\Loginbutton.png" />
+    <Content Include="App_Themes\Theme1\Css\images\logo.png" />
+    <Content Include="App_Themes\Theme1\Css\images\main-bg.png" />
+    <Content Include="App_Themes\Theme1\Css\images\main-delimiter.png" />
+    <Content Include="App_Themes\Theme1\Css\images\main_sprite.png" />
+    <Content Include="App_Themes\Theme1\Css\images\menu_bg1.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\menu_bg2.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\menu_icon.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\menu_sp.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\minus.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\My-Documents.png" />
+    <Content Include="App_Themes\Theme1\Css\images\najah.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\nav-arrow-down-white.png" />
+    <Content Include="App_Themes\Theme1\Css\images\nav-arrow-down.png" />
+    <Content Include="App_Themes\Theme1\Css\images\nav-arrow-left-white.png" />
+    <Content Include="App_Themes\Theme1\Css\images\nav-arrow-left.png" />
+    <Content Include="App_Themes\Theme1\Css\images\nav-arrow-right-white.png" />
+    <Content Include="App_Themes\Theme1\Css\images\nav-arrow-right.png" />
+    <Content Include="App_Themes\Theme1\Css\images\nav-arrow-top-white.png" />
+    <Content Include="App_Themes\Theme1\Css\images\nav-arrow-top.png" />
+    <Content Include="App_Themes\Theme1\Css\images\neshast.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\new.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\news.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\o.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\panel_button.png" />
+    <Content Include="App_Themes\Theme1\Css\images\Pass.png" />
+    <Content Include="App_Themes\Theme1\Css\images\pattern1.png" />
+    <Content Include="App_Themes\Theme1\Css\images\pix.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\plus.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\R.png" />
+    <Content Include="App_Themes\Theme1\Css\images\rm.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\Save.png" />
+    <Content Include="App_Themes\Theme1\Css\images\School.png" />
+    <Content Include="App_Themes\Theme1\Css\images\select.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\Settings.png" />
+    <Content Include="App_Themes\Theme1\Css\images\shade.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\shadeactive.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\small_box_bot_l.png" />
+    <Content Include="App_Themes\Theme1\Css\images\small_box_bot_r.png" />
+    <Content Include="App_Themes\Theme1\Css\images\sms.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\SMSRecive.png" />
+    <Content Include="App_Themes\Theme1\Css\images\SMSSend.png" />
+    <Content Include="App_Themes\Theme1\Css\images\Stage_BG_btm.png" />
+    <Content Include="App_Themes\Theme1\Css\images\Stage_BG_top.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\Stage_BG_top.png" />
+    <Content Include="App_Themes\Theme1\Css\images\status.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\status.php.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\status.png" />
+    <Content Include="App_Themes\Theme1\Css\images\stop.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\story.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\story2.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\sub-select.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\sub.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\sub.png" />
+    <Content Include="App_Themes\Theme1\Css\images\tab_b.png" />
+    <Content Include="App_Themes\Theme1\Css\images\tab_l.png" />
+    <Content Include="App_Themes\Theme1\Css\images\tab_m.png" />
+    <Content Include="App_Themes\Theme1\Css\images\tab_r.png" />
+    <Content Include="App_Themes\Theme1\Css\images\title.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\tl.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\tm.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\toptitle.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\tr.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\true.gif" />
+    <Content Include="App_Themes\Theme1\Css\images\user.png" />
+    <Content Include="App_Themes\Theme1\Css\images\usermenu_bg.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\usermenu_bg1.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\usermenu_bg2.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\usermenu_bg_left.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\usermenu_bg_left1.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\usermenu_bg_left2.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\usermenu_bg_right.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\usermenu_bg_right1.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\usermenu_bg_right2.jpg" />
+    <Content Include="App_Themes\Theme1\Css\images\Users.png" />
+    <Content Include="App_Themes\Theme1\Css\images\V.png" />
+    <Content Include="App_Themes\Theme1\Css\images\x.png" />
+    <Content Include="App_Themes\Theme1\Default.css" />
+    <Content Include="App_Themes\Theme1\gv.css" />
+    <Content Include="App_Themes\Theme1\Images2\Agree.png" />
+    <Content Include="App_Themes\Theme1\Images2\catalog.png" />
+    <Content Include="App_Themes\Theme1\Images2\Map.png" />
+    <Content Include="App_Themes\Theme1\Images2\park.png" />
+    <Content Include="App_Themes\Theme1\Images2\report.png" />
+    <Content Include="App_Themes\Theme1\Images2\tree.png" />
+    <Content Include="App_Themes\Theme1\Images2\Users.png" />
+    <Content Include="App_Themes\Theme1\images\004.gif" />
+    <Content Include="App_Themes\Theme1\images\005.gif" />
+    <Content Include="App_Themes\Theme1\images\006.gif" />
+    <Content Include="App_Themes\Theme1\images\007.gif" />
+    <Content Include="App_Themes\Theme1\images\Access.png" />
+    <Content Include="App_Themes\Theme1\images\action_stop.gif" />
+    <Content Include="App_Themes\Theme1\images\Add.jpg" />
+    <Content Include="App_Themes\Theme1\images\alt-hover.png" />
+    <Content Include="App_Themes\Theme1\images\arm2.png" />
+    <Content Include="App_Themes\Theme1\images\arrow_left.gif" />
+    <Content Include="App_Themes\Theme1\images\Attachment-32.png" />
+    <Content Include="App_Themes\Theme1\images\attachment.gif" />
+    <Content Include="App_Themes\Theme1\images\back.gif" />
+    <Content Include="App_Themes\Theme1\images\backup2.png" />
+    <Content Include="App_Themes\Theme1\images\bac_search.png" />
+    <Content Include="App_Themes\Theme1\images\base-select.gif" />
+    <Content Include="App_Themes\Theme1\images\base.gif" />
+    <Content Include="App_Themes\Theme1\images\base.png" />
+    <Content Include="App_Themes\Theme1\images\base1.png" />
+    <Content Include="App_Themes\Theme1\images\bb.gif" />
+    <Content Include="App_Themes\Theme1\images\bbg1.gif" />
+    <Content Include="App_Themes\Theme1\images\bbg1.jpg" />
+    <Content Include="App_Themes\Theme1\images\bbg2.gif" />
+    <Content Include="App_Themes\Theme1\images\bbg2_.gif" />
+    <Content Include="App_Themes\Theme1\images\bbg3.gif" />
+    <Content Include="App_Themes\Theme1\images\bbg5.gif" />
+    <Content Include="App_Themes\Theme1\images\bg.gif" />
+    <Content Include="App_Themes\Theme1\images\bg.jpg" />
+    <Content Include="App_Themes\Theme1\images\bg2.jpg" />
+    <Content Include="App_Themes\Theme1\images\bgtop.jpg" />
+    <Content Include="App_Themes\Theme1\images\bgtop2.jpg" />
+    <Content Include="App_Themes\Theme1\images\BG_2013.gif" />
+    <Content Include="App_Themes\Theme1\images\bl.gif" />
+    <Content Include="App_Themes\Theme1\images\bm.gif" />
+    <Content Include="App_Themes\Theme1\images\bottom.gif" />
+    <Content Include="App_Themes\Theme1\images\boxin.jpg" />
+    <Content Include="App_Themes\Theme1\images\br.gif" />
+    <Content Include="App_Themes\Theme1\images\btn.jpg" />
+    <Content Include="App_Themes\Theme1\images\btn_search.jpg" />
+    <Content Include="App_Themes\Theme1\images\bt_close.png" />
+    <Content Include="App_Themes\Theme1\images\bt_login.png" />
+    <Content Include="App_Themes\Theme1\images\bt_open.png" />
+    <Content Include="App_Themes\Theme1\images\bt_register.png" />
+    <Content Include="App_Themes\Theme1\images\calender.gif" />
+    <Content Include="App_Themes\Theme1\images\cancel.jpg" />
+    <Content Include="App_Themes\Theme1\images\cancel.png" />
+    <Content Include="App_Themes\Theme1\images\chat.gif" />
+    <Content Include="App_Themes\Theme1\images\coint.jpg" />
+    <Content Include="App_Themes\Theme1\images\collapse.png" />
+    <Content Include="App_Themes\Theme1\images\collapsed.gif" />
+    <Content Include="App_Themes\Theme1\images\credite.png" />
+    <Content Include="App_Themes\Theme1\images\darkok.jpg" />
+    <Content Include="App_Themes\Theme1\images\date.png" />
+    <Content Include="App_Themes\Theme1\images\delete.png" />
+    <Content Include="App_Themes\Theme1\images\Dollar-icon.png" />
+    <Content Include="App_Themes\Theme1\images\edit.png" />
+    <Content Include="App_Themes\Theme1\images\expand.png" />
+    <Content Include="App_Themes\Theme1\images\expanded.gif" />
+    <Content Include="App_Themes\Theme1\images\false.gif" />
+    <Content Include="App_Themes\Theme1\images\footer.jpg" />
+    <Content Include="App_Themes\Theme1\images\g-header.jpg" />
+    <Content Include="App_Themes\Theme1\images\g-header2.jpg" />
+    <Content Include="App_Themes\Theme1\images\glossyback.gif" />
+    <Content Include="App_Themes\Theme1\images\glossyback2.gif" />
+    <Content Include="App_Themes\Theme1\images\GoToLeft.png" />
+    <Content Include="App_Themes\Theme1\images\GoToRight.png" />
+    <Content Include="App_Themes\Theme1\images\grad1.png" />
+    <Content Include="App_Themes\Theme1\images\grad2.png" />
+    <Content Include="App_Themes\Theme1\images\green_arrow.gif" />
+    <Content Include="App_Themes\Theme1\images\grid-alt.png" />
+    <Content Include="App_Themes\Theme1\images\grid-header.png" />
+    <Content Include="App_Themes\Theme1\images\grid-pgr.png" />
+    <Content Include="App_Themes\Theme1\images\group.jpg" />
+    <Content Include="App_Themes\Theme1\images\hbtn-add-r.jpg" />
+    <Content Include="App_Themes\Theme1\images\hbtn-back-r.jpg" />
+    <Content Include="App_Themes\Theme1\images\hbtn-blank.jpg" />
+    <Content Include="App_Themes\Theme1\images\hbtn-delete-r.jpg" />
+    <Content Include="App_Themes\Theme1\images\hbtn-ok-r.jpg" />
+    <Content Include="App_Themes\Theme1\images\hbtn-print-r.jpg" />
+    <Content Include="App_Themes\Theme1\images\hbtn-Report-r.jpg" />
+    <Content Include="App_Themes\Theme1\images\hbtn-search-r.jpg" />
+    <Content Include="App_Themes\Theme1\images\hbtn-upload-r.jpg" />
+    <Content Include="App_Themes\Theme1\images\Header.jpg" />
+    <Content Include="App_Themes\Theme1\images\Headline_left.gif" />
+    <Content Include="App_Themes\Theme1\images\Headline_left2.gif" />
+    <Content Include="App_Themes\Theme1\images\Headline_middle.gif" />
+    <Content Include="App_Themes\Theme1\images\Headline_middle2.gif" />
+    <Content Include="App_Themes\Theme1\images\Headline_right.gif" />
+    <Content Include="App_Themes\Theme1\images\Headline_right2.gif" />
+    <Content Include="App_Themes\Theme1\images\hmail.jpg" />
+    <Content Include="App_Themes\Theme1\images\hmail2.jpg" />
+    <Content Include="App_Themes\Theme1\images\icon.gif" />
+    <Content Include="App_Themes\Theme1\images\icon2.gif" />
+    <Content Include="App_Themes\Theme1\images\icon_search.jpg" />
+    <Content Include="App_Themes\Theme1\images\indentbg.gif" />
+    <Content Include="App_Themes\Theme1\images\indentbg2.gif" />
+    <Content Include="App_Themes\Theme1\images\item-pointer-mover.gif" />
+    <Content Include="App_Themes\Theme1\images\item-pointer.gif" />
+    <Content Include="App_Themes\Theme1\images\Item_01.png" />
+    <Content Include="App_Themes\Theme1\images\L.png" />
+    <Content Include="App_Themes\Theme1\images\large_test.jpg" />
+    <Content Include="App_Themes\Theme1\images\larglbox_header_title.png" />
+    <Content Include="App_Themes\Theme1\images\larg_box_bot_l.png" />
+    <Content Include="App_Themes\Theme1\images\larg_box_bot_r.png" />
+    <Content Include="App_Themes\Theme1\images\lava.gif" />
+    <Content Include="App_Themes\Theme1\images\lava.png" />
+    <Content Include="App_Themes\Theme1\images\lavalamp.gif" />
+    <Content Include="App_Themes\Theme1\images\linkarrow.gif" />
+    <Content Include="App_Themes\Theme1\images\lm.gif" />
+    <Content Include="App_Themes\Theme1\images\loading2.gif" />
+    <Content Include="App_Themes\Theme1\images\login.gif" />
+    <Content Include="App_Themes\Theme1\images\Loginbutton.png" />
+    <Content Include="App_Themes\Theme1\images\logo.png" />
+    <Content Include="App_Themes\Theme1\images\main-bg.png" />
+    <Content Include="App_Themes\Theme1\images\main-delimiter.png" />
+    <Content Include="App_Themes\Theme1\images\main_sprite.png" />
+    <Content Include="App_Themes\Theme1\images\menu_bg1.gif" />
+    <Content Include="App_Themes\Theme1\images\menu_bg2.gif" />
+    <Content Include="App_Themes\Theme1\images\menu_icon.gif" />
+    <Content Include="App_Themes\Theme1\images\menu_sp.jpg" />
+    <Content Include="App_Themes\Theme1\images\minus.gif" />
+    <Content Include="App_Themes\Theme1\images\My-Documents.png" />
+    <Content Include="App_Themes\Theme1\images\najah.jpg" />
+    <Content Include="App_Themes\Theme1\images\nav-arrow-down-white.png" />
+    <Content Include="App_Themes\Theme1\images\nav-arrow-down.png" />
+    <Content Include="App_Themes\Theme1\images\nav-arrow-left-white.png" />
+    <Content Include="App_Themes\Theme1\images\nav-arrow-left.png" />
+    <Content Include="App_Themes\Theme1\images\nav-arrow-right-white.png" />
+    <Content Include="App_Themes\Theme1\images\nav-arrow-right.png" />
+    <Content Include="App_Themes\Theme1\images\nav-arrow-top-white.png" />
+    <Content Include="App_Themes\Theme1\images\nav-arrow-top.png" />
+    <Content Include="App_Themes\Theme1\images\neshast.gif" />
+    <Content Include="App_Themes\Theme1\images\new.gif" />
+    <Content Include="App_Themes\Theme1\images\news.gif" />
+    <Content Include="App_Themes\Theme1\images\o.jpg" />
+    <Content Include="App_Themes\Theme1\images\panel_button.png" />
+    <Content Include="App_Themes\Theme1\images\Pass.png" />
+    <Content Include="App_Themes\Theme1\images\pattern1.png" />
+    <Content Include="App_Themes\Theme1\images\pix.gif" />
+    <Content Include="App_Themes\Theme1\images\plus.gif" />
+    <Content Include="App_Themes\Theme1\images\R.png" />
+    <Content Include="App_Themes\Theme1\images\rm.gif" />
+    <Content Include="App_Themes\Theme1\images\Save.png" />
+    <Content Include="App_Themes\Theme1\images\School.png" />
+    <Content Include="App_Themes\Theme1\images\select.jpg" />
+    <Content Include="App_Themes\Theme1\images\Settings.png" />
+    <Content Include="App_Themes\Theme1\images\shade.gif" />
+    <Content Include="App_Themes\Theme1\images\shadeactive.gif" />
+    <Content Include="App_Themes\Theme1\images\small_box_bot_l.png" />
+    <Content Include="App_Themes\Theme1\images\small_box_bot_r.png" />
+    <Content Include="App_Themes\Theme1\images\sms.jpg" />
+    <Content Include="App_Themes\Theme1\images\SMSRecive.png" />
+    <Content Include="App_Themes\Theme1\images\SMSSend.png" />
+    <Content Include="App_Themes\Theme1\images\Stage_BG_btm.png" />
+    <Content Include="App_Themes\Theme1\images\Stage_BG_top.gif" />
+    <Content Include="App_Themes\Theme1\images\Stage_BG_top.png" />
+    <Content Include="App_Themes\Theme1\images\status.gif" />
+    <Content Include="App_Themes\Theme1\images\status.php.gif" />
+    <Content Include="App_Themes\Theme1\images\status.png" />
+    <Content Include="App_Themes\Theme1\images\stop.jpg" />
+    <Content Include="App_Themes\Theme1\images\story.gif" />
+    <Content Include="App_Themes\Theme1\images\story2.gif" />
+    <Content Include="App_Themes\Theme1\images\sub-select.gif" />
+    <Content Include="App_Themes\Theme1\images\sub.gif" />
+    <Content Include="App_Themes\Theme1\images\sub.png" />
+    <Content Include="App_Themes\Theme1\images\tab_b.png" />
+    <Content Include="App_Themes\Theme1\images\tab_l.png" />
+    <Content Include="App_Themes\Theme1\images\tab_m.png" />
+    <Content Include="App_Themes\Theme1\images\tab_r.png" />
+    <Content Include="App_Themes\Theme1\images\title.gif" />
+    <Content Include="App_Themes\Theme1\images\tl.gif" />
+    <Content Include="App_Themes\Theme1\images\tm.gif" />
+    <Content Include="App_Themes\Theme1\images\toptitle.gif" />
+    <Content Include="App_Themes\Theme1\images\tr.gif" />
+    <Content Include="App_Themes\Theme1\images\true.gif" />
+    <Content Include="App_Themes\Theme1\images\ttrree.jpg" />
+    <Content Include="App_Themes\Theme1\images\user.png" />
+    <Content Include="App_Themes\Theme1\images\usermenu_bg.jpg" />
+    <Content Include="App_Themes\Theme1\images\usermenu_bg1.jpg" />
+    <Content Include="App_Themes\Theme1\images\usermenu_bg2.jpg" />
+    <Content Include="App_Themes\Theme1\images\usermenu_bg_left.jpg" />
+    <Content Include="App_Themes\Theme1\images\usermenu_bg_left1.jpg" />
+    <Content Include="App_Themes\Theme1\images\usermenu_bg_left2.jpg" />
+    <Content Include="App_Themes\Theme1\images\usermenu_bg_right.jpg" />
+    <Content Include="App_Themes\Theme1\images\usermenu_bg_right1.jpg" />
+    <Content Include="App_Themes\Theme1\images\usermenu_bg_right2.jpg" />
+    <Content Include="App_Themes\Theme1\images\Users.png" />
+    <Content Include="App_Themes\Theme1\images\V.png" />
+    <Content Include="App_Themes\Theme1\images\x.png" />
+    <Content Include="App_Themes\Theme1\js\jquery-1.11.1.min.js" />
+    <Content Include="App_Themes\Theme1\js\jquery.price_format.2.0.min.js" />
+    <Content Include="App_Themes\Theme2\StyleSheet1.css" />
+    <Content Include="App_Themes\Theme3\bootstrap-rtl.css" />
+    <Content Include="App_Themes\Theme3\bootstrap-rtl.js" />
+    <Content Include="App_Themes\Theme3\Font\fontawesome-webfont.svg" />
+    <Content Include="App_Themes\Theme3\Font\W_YEKAN.svg" />
+    <Content Include="App_Themes\Theme3\gv.css" />
+    <Content Include="App_Themes\Theme3\jquery-1.11.3.min.js" />
+    <Content Include="App_Themes\Theme3\jquery-ui.css" />
+    <Content Include="App_Themes\Theme3\jquery-ui.js" />
+    <Content Include="App_Themes\Theme3\MyStyle.css" />
+    <Content Include="Bazras\AgreePercent.aspx" />
+    <Content Include="Bazras\AgreePercent2.aspx" />
+    <Content Include="Bazras\AllPeyman.aspx" />
+    <Content Include="Bazras\AllProtest.aspx" />
+    <Content Include="Bazras\ChangePass.aspx" />
+    <Content Include="Bazras\ExpalnRequest.aspx" />
+    <Content Include="Bazras\khesarat.aspx" />
+    <Content Include="Bazras\Price.aspx" />
+    <Content Include="bin\ClosedXML.dll" />
+    <Content Include="bin\DocumentFormat.OpenXml.dll" />
+    <Content Include="bin\GreenSpace.dll" />
+    <Content Include="bin\GreenSpace.pdb" />
+    <Content Include="bin\GreenSpace.vshost.exe" />
+    <Content Include="bin\GreenSpaceBLL.exe" />
+    <Content Include="bin\GreenSpaceBLL.pdb" />
+    <Content Include="bin\GreenSpaceCL.exe" />
+    <Content Include="bin\GreenSpaceCL.pdb" />
+    <Content Include="bin\GreenSpaceDAL.exe" />
+    <Content Include="bin\GreenSpaceDAL.pdb" />
+    <Content Include="bin\Microsoft.ReportViewer.WebForms.dll" />
+    <Content Include="bin\Microsoft.ReportViewer.WebForms.xml" />
+    <Content Include="bin\Microsoft.ReportViewer.WinForms.dll" />
+    <Content Include="bin\Microsoft.ReportViewer.WinForms.xml" />
+    <Content Include="CityZen\AccessDenied.aspx" />
+    <Content Include="CityZen\attach.aspx" />
+    <Content Include="CityZen\ChangePassword.aspx" />
+    <Content Include="CityZen\Css\ace-extra.min.js" />
+    <Content Include="CityZen\Css\bootstrap-editable.css" />
+    <Content Include="CityZen\Css\datepicker.css" />
+    <Content Include="CityZen\Css\jquery-ui.custom.min.css" />
+    <Content Include="CityZen\Css\jquery.gritter.css" />
+    <Content Include="CityZen\Css\ProfileCss.css" />
+    <Content Include="CityZen\Css\select2.css" />
+    <Content Include="CityZen\DashBoard.aspx" />
+    <Content Include="CityZen\HomeCSS.css" />
+    <Content Include="CityZen\lightbox\cancel.png" />
+    <Content Include="CityZen\lightbox\LightBox.css" />
+    <Content Include="CityZen\lightbox\lightbox.js" />
+    <Content Include="CityZen\lightbox\main-bg.png" />
+    <Content Include="CityZen\lightbox\overlay.png" />
+    <Content Include="CityZen\Login.aspx" />
+    <Content Include="CityZen\MapRegTree.aspx" />
+    <Content Include="CityZen\PersonalView.aspx" />
+    <Content Include="CityZen\Profile.aspx" />
+    <Content Include="CityZen\RegPerson.aspx" />
+    <Content Include="CityZen\RegTree.aspx" />
+    <Content Include="CityZen\RequestList.aspx" />
+    <Content Include="CityZen\UploadFile.ascx" />
+    <Content Include="ClientBin\ESRI3.xap" />
+    <Content Include="Controls\CtlAgreePercent22.ascx" />
+    <Content Include="Controls\CtlAllSubjectExplan.ascx" />
+    <Content Include="Controls\ctlArchiveDD.ascx" />
+    <Content Include="Controls\CtlAttach.ascx" />
+    <Content Include="Controls\CtlExplanRequest.ascx" />
+    <Content Include="Controls\CtlFromToDate.ascx" />
+    <Content Include="Controls\CtlPercentHistory.ascx" />
+    <Content Include="Controls\TreeControls\CtlAbBaha.ascx" />
+    <Content Include="Controls\TreeControls\CtlAgeCalculation.ascx" />
+    <Content Include="Controls\TreeControls\CtlArzeshBasari.ascx" />
+    <Content Include="Controls\CtlCatalog.ascx" />
+    <Content Include="Controls\TreeControls\CtlCut.ascx" />
+    <Content Include="Controls\CtlDatePick.ascx" />
+    <Content Include="Controls\CtlDropExplan.ascx" />
+    <Content Include="Controls\TreeControls\CtlEcotorism.ascx" />
+    <Content Include="Controls\TreeControls\CtlHaghighi.ascx" />
+    <Content Include="Controls\TreeControls\CtlKambodSaraneh.ascx" />
+    <Content Include="Controls\CtlKhesarat.ascx" />
+    <Content Include="Controls\TreeControls\CtlLicensingTree.ascx" />
+    <Content Include="Controls\TreeControls\CtlMahsolDaramad.ascx" />
+    <Content Include="Controls\TreeControls\CtlNazar.ascx" />
+    <Content Include="Controls\TreeControls\CtlNegahdari.ascx" />
+    <Content Include="Controls\TreeControls\CtlPardakht.ascx" />
+    <Content Include="Controls\TreeControls\CtlPersonal.ascx" />
+    <Content Include="Controls\CtlPEymanPark.ascx" />
+    <Content Include="Controls\Ctlpp.ascx" />
+    <Content Include="Controls\CtlRegionPark.ascx" />
+    <Content Include="Controls\TreeControls\CtlPersonOnly.ascx" />
+    <Content Include="Controls\TreeControls\CtlRotbal.ascx" />
+    <Content Include="Controls\TreeControls\CtlSakhtikar.ascx" />
+    <Content Include="Controls\TreeControls\CtlSupply.ascx" />
+    <Content Include="Controls\TreeControls\CtlTreeBonCutting.ascx" />
+    <Content Include="Controls\WebUserControl1.ascx" />
+    <Content Include="CSS\esri.css" />
+    <Content Include="CSS\ol.css" />
+    <Content Include="CSS\ol.js" />
+    <Content Include="ErrorPage.aspx" />
+    <Content Include="ESRI3TestPage.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="Image\1.jpg" />
+    <Content Include="Image\2.jpg" />
+    <Content Include="Image\3.jpg" />
+    <Content Include="Image\back1.jpg" />
+    <Content Include="Image\back2.jpg" />
+    <Content Include="Image\back3.jpg" />
+    <Content Include="Image\backbody.jpg" />
+    <Content Include="Image\backbody1.jpg" />
+    <Content Include="Image\head3.jpg" />
+    <Content Include="Image\head3.png" />
+    <Content Include="Image\NastaliqOnline.png" />
+    <Content Include="Image\Profile-pic\avatar2.png" />
+    <Content Include="Image\Profile-pic\avatar5.png" />
+    <Content Include="Image\Profile-pic\profile-pic.jpg" />
+    <Content Include="LoginCityZen.aspx" />
+    <Content Include="logout.aspx" />
+    <Content Include="Manage\Agreement.aspx" />
+    <Content Include="Manage\Area.aspx" />
+    <Content Include="Manage\AreaAll.aspx" />
+    <Content Include="Manage\AreaExel.aspx" />
+    <Content Include="Manage\AreaSakhteman.aspx" />
+    <Content Include="Manage\Catalog.aspx" />
+    <Content Include="Manage\DefaultPrice.aspx" />
+    <Content Include="Manage\DefaultRepeat.aspx" />
+    <Content Include="Manage\ExelRefahi.aspx" />
+    <Content Include="Manage\Explain.aspx" />
+    <Content Include="Manage\explanRequest.aspx" />
+    <Content Include="Manage\Khesarat.aspx" />
+    <Content Include="Manage\OneExplainArea.aspx" />
+    <Content Include="Manage\Park.aspx" />
+    <Content Include="Manage\Peyman.aspx" />
+    <Content Include="Manage\pppp.aspx" />
+    <Content Include="Manage\Tree\AbBaha.aspx" />
+    <Content Include="Manage\Tree\AgeCalculation.aspx" />
+    <Content Include="Manage\Tree\ArzeshBasari.aspx" />
+    <Content Include="Manage\Tree\CuttingTree.aspx" />
+    <Content Include="Manage\Tree\EcoTorism.aspx" />
+    <Content Include="Manage\Tree\Haghighi.aspx" />
+    <Content Include="Manage\Tree\KambodSaraneh.aspx" />
+    <Content Include="Manage\Tree\LicensingTree.aspx" />
+    <Content Include="Manage\Tree\MahsolDaramad.aspx" />
+    <Content Include="Manage\Tree\Negahdari.aspx" />
+    <Content Include="Manage\Tree\Personels.aspx" />
+    <Content Include="Manage\Tree\Rotbal.aspx" />
+    <Content Include="Manage\Tree\Sakhtikar.aspx" />
+    <Content Include="Manage\Tree\Supply.aspx" />
+    <Content Include="Masters\DashBordMaster.Master" />
+    <Content Include="App_Themes\Theme1\Css\Almostafa.css" />
+    <Content Include="App_Themes\Theme1\Css\bootstrap-theme.css.map" />
+    <Content Include="App_Themes\Theme1\Css\bootstrap.css.map" />
+    <Content Include="App_Themes\Theme1\Css\Default.skin" />
+    <Content Include="App_Themes\Theme1\Css\Font\Mitra-webfont.eot" />
+    <Content Include="App_Themes\Theme1\Css\Font\Mitra-webfont.ttf" />
+    <Content Include="App_Themes\Theme1\Css\Font\Mitra-webfont.woff" />
+    <Content Include="App_Themes\Theme1\Css\Font\MitraBold-webfont.ttf" />
+    <Content Include="App_Themes\Theme1\Css\Font\MitraBold-webfont.woff" />
+    <Content Include="Masters\MainMaster.Master" />
+    <Content Include="Masters\AgreeMaster.master" />
+    <Content Include="App_Themes\Theme1\Default.skin" />
+    <Content Include="Agree\Web.config" />
+    <Content Include="RegPersonal.aspx" />
+    <Content Include="Report\CtlFromDateToDate.ascx" />
+    <Content Include="Report\park.JPG" />
+    <Content Include="Report\ReportSelect.aspx" />
+    <Content Include="Report\ReportTree\CuttingTree.aspx" />
+    <Content Include="Report\ReportTree\License.aspx" />
+    <Content Include="Report\ReportTree\ReportViewTree.aspx" />
+    <Content Include="Report\ReportView.aspx" />
+    <Content Include="Report\ReportView2.aspx" />
+    <Content Include="Report\Rep_Dashbord.aspx" />
+    <Content Include="Report\SubjectPrice.aspx" />
+    <Content Include="Report\testt.aspx" />
+    <Content Include="Request.rdlc">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="1.rdlc">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Scripts\init.js" />
+    <Content Include="CityZen\Web.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Report\Web.config" />
+    <Content Include="Report\DsDiagram.xsc">
+      <DependentUpon>DsDiagram.xsd</DependentUpon>
+    </Content>
+    <None Include="Report\DsDiagram.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsDiagram.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Report\DsDiagram.xss">
+      <DependentUpon>DsDiagram.xsd</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\map.js" />
+    <Content Include="Scripts\mapCopy.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\ol.js" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="User\PermissionPack.aspx" />
+    <Content Include="User\User.aspx" />
+    <Content Include="User\USerPerMission.aspx" />
+    <Content Include="Web References\SaraWebService\ClsSaraFinanceMessageGhom.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\SaraWebService\ClsSaraSharsaziMessageGhom.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\SaraWebService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="User\Web.config" />
+    <None Include="Web References\SaraWebService\SrvShahrsaziGhom.disco" />
+    <Content Include="WebService1.asmx" />
+    <Content Include="WebService\AgreePercent.asmx" />
+    <Content Include="WebService\AgreeProtest.asmx" />
+    <Content Include="WebService\SubjectExplan.asmx" />
+    <Content Include="WebService\UserWS.asmx" />
+    <Content Include="GreenSpaceDataSet.xsc">
+      <DependentUpon>GreenSpaceDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="App_Themes\Theme1\Css\Font\fontawesome-webfont.eot" />
+    <Content Include="App_Themes\Theme1\Css\Font\fontawesome-webfont.ttf" />
+    <Content Include="App_Themes\Theme1\Css\Font\fontawesome-webfont.woff" />
+    <Content Include="App_Themes\Theme1\images\logo.png.1188_1.746.partial" />
+    <Content Include="App_Themes\Theme1\images\Thumbs.db" />
+    <Content Include="App_Themes\Theme1\Css\images\logo.png.1188_1.746.partial" />
+    <Content Include="App_Themes\Theme1\Css\images\Thumbs.db" />
+    <Content Include="Bazras\Web.config" />
+    <Content Include="App_Themes\Theme1\Css\fonts\fontawesome-webfont.eot" />
+    <Content Include="App_Themes\Theme1\Css\fonts\fontawesome-webfont.ttf" />
+    <Content Include="App_Themes\Theme1\Css\fonts\fontawesome-webfont.woff" />
+    <Content Include="App_Themes\Theme1\Css\fonts\Mitra-webfont.eot" />
+    <Content Include="App_Themes\Theme1\Css\fonts\Mitra-webfont.ttf" />
+    <Content Include="App_Themes\Theme1\Css\fonts\Mitra-webfont.woff" />
+    <Content Include="App_Themes\Theme1\Css\fonts\MitraBold-webfont.ttf" />
+    <Content Include="App_Themes\Theme1\Css\fonts\MitraBold-webfont.woff" />
+    <Content Include="App_Themes\Theme1\Css\Font\New\FarMitraBold.ttf" />
+    <Content Include="App_Themes\Theme1\Css\Font\New\FarMitraBold.woff" />
+    <Content Include="App_Themes\Theme1\Css\Font\New\Far_MitraBd.eot" />
+    <Content Include="App_Themes\Theme1\Css\Font\New\Far_MitraBd.woff2" />
+    <Content Include="App_Themes\Theme1\Css\Font\BMitra.eot" />
+    <Content Include="App_Themes\Theme1\Css\Font\BMitra.ttf" />
+    <Content Include="App_Themes\Theme1\Css\Font\BMitra.woff" />
+    <Content Include="bin\GreenSpace.dll.config" />
+    <Content Include="bin\GreenSpace.vshost.exe.config" />
+    <Content Include="bin\GreenSpace.vshost.exe.manifest" />
+    <Content Include="CityZen\DashBoard.Master" />
+    <Content Include="App_Themes\Theme3\Default.skin" />
+    <Content Include="App_Themes\Theme3\Font\BNazanin.eot" />
+    <Content Include="App_Themes\Theme3\Font\BNazanin.ttf" />
+    <Content Include="App_Themes\Theme3\Font\BNazanin.woff" />
+    <Content Include="App_Themes\Theme3\Font\BRoya.eot" />
+    <Content Include="App_Themes\Theme3\Font\BRoya.ttf" />
+    <Content Include="App_Themes\Theme3\Font\BRoya.woff" />
+    <Content Include="App_Themes\Theme3\Font\BZar.eot" />
+    <Content Include="App_Themes\Theme3\Font\BZar.ttf" />
+    <Content Include="App_Themes\Theme3\Font\BZar.woff" />
+    <Content Include="App_Themes\Theme3\Font\fontawesome-webfont.eot" />
+    <Content Include="App_Themes\Theme3\Font\fontawesome-webfont.ttf" />
+    <Content Include="App_Themes\Theme3\Font\fontawesome-webfont.woff" />
+    <Content Include="App_Themes\Theme3\Font\fontawesome-webfont.woff2" />
+    <Content Include="App_Themes\Theme3\Font\FontAwesome.otf" />
+    <Content Include="App_Themes\Theme3\Font\W_YEKAN.eot" />
+    <Content Include="App_Themes\Theme3\Font\W_YEKAN.otf" />
+    <Content Include="App_Themes\Theme3\Font\W_YEKAN.ttf" />
+    <Content Include="App_Themes\Theme3\Font\W_YEKAN.woff" />
+    <None Include="GreenSpaceDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GreenSpaceDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="GreenSpaceDataSet.xss">
+      <DependentUpon>GreenSpaceDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="Masters\WizardDashboard.Master" />
+    <Content Include="Masters\Bazras.master" />
+    <Content Include="Manage\Web.config" />
+    <None Include="Properties\PublishProfiles\greenProfile.pubxml" />
+    <Content Include="SubjectPriceDataSet.xsc">
+      <DependentUpon>SubjectPriceDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="spDataSet.xsc">
+      <DependentUpon>spDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="Report\RepMaster.master" />
+    <Content Include="Report\ReportTree\RemMasterTree.master" />
+    <None Include="spDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>spDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="spDataSet.xss">
+      <DependentUpon>spDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="spRepArea.xsc">
+      <DependentUpon>spRepArea.xsd</DependentUpon>
+    </Content>
+    <None Include="spRepArea.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>spRepArea.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="spRepArea.xss">
+      <DependentUpon>spRepArea.xsd</DependentUpon>
+    </Content>
+    <None Include="SubjectPriceDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SubjectPriceDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="SubjectPriceDataSet.xss">
+      <DependentUpon>SubjectPriceDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="Web References\SaraWebService\SrvShahrsaziGhom.wsdl" />
+    <None Include="Web References\SaraWebService\SrvShahrsaziGhom.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\SaraWebService\SrvShahrsaziGhom0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\SaraWebService\SrvShahrsaziGhom1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\SaraWebService\SrvShahrsaziGhom2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Theme1\Css\ace-ie.min.css" />
+    <Content Include="App_Themes\Theme1\Css\ace-part2.min.css" />
+    <Content Include="App_Themes\Theme1\Css\ace-rtl.min.css" />
+    <Content Include="App_Themes\Theme1\Css\ace-skins.min.css" />
+    <Content Include="App_Themes\Theme1\Css\ace.min.css" />
+    <Content Include="App_Themes\Theme1\Css\bootstrap-theme.css" />
+    <Content Include="App_Themes\Theme1\Css\bootstrap-theme.min.css" />
+    <Content Include="App_Themes\Theme1\Css\bootstrap.css" />
+    <Content Include="App_Themes\Theme1\Css\bootstrap.min.css" />
+    <Content Include="App_Themes\Theme1\Css\bootstrap.rtl.css" />
+    <Content Include="App_Themes\Theme1\Css\bootstrap.rtl.min.css" />
+    <Content Include="App_Themes\Theme1\Css\cssloading.css" />
+    <Content Include="App_Themes\Theme1\Css\Default.css" />
+    <Content Include="App_Themes\Theme1\Css\font-awesome.css" />
+    <Content Include="App_Themes\Theme1\Css\font-awesome.min.css" />
+    <Content Include="App_Themes\Theme1\Css\Font\font-awesome.css" />
+    <Content Include="App_Themes\Theme1\Css\Font\Mitra-webfont.svg" />
+    <Content Include="App_Themes\Theme1\Css\Gridstyle.css" />
+    <Content Include="App_Themes\Theme1\Css\gv.css" />
+    <Content Include="App_Themes\Theme1\Css\jquery-ui.css" />
+    <Content Include="App_Themes\Theme1\Css\jquery.timepicker.css" />
+    <Content Include="App_Themes\Theme1\Css\lightbox.css" />
+    <Content Include="App_Themes\Theme1\Css\MyCss.css" />
+    <Content Include="App_Themes\Theme1\Css\persianDatepicker-dark.css" />
+    <Content Include="App_Themes\Theme1\Css\persianDatepicker-default.css" />
+    <Content Include="App_Themes\Theme1\Css\tabcss.css" />
+    <Content Include="App_Themes\Theme1\Css\theme.css" />
+    <Content Include="App_Themes\Theme1\Css\WebFonts.css" />
+    <Content Include="App_Themes\Theme1\js\AlmostafaScript.js" />
+    <Content Include="App_Themes\Theme1\js\bootstrap.js" />
+    <Content Include="App_Themes\Theme1\js\Catalog.js" />
+    <Content Include="App_Themes\Theme1\js\DesktopNotify.js" />
+    <Content Include="App_Themes\Theme1\js\gv.js" />
+    <Content Include="App_Themes\Theme1\js\GV_Pager.min.js" />
+    <Content Include="App_Themes\Theme1\js\jquery-1.10.2.js" />
+    <Content Include="App_Themes\Theme1\js\jquery-1.4.1.min.js" />
+    <Content Include="App_Themes\Theme1\js\jquery-min.js" />
+    <Content Include="App_Themes\Theme1\js\jquery-ui.js" />
+    <Content Include="App_Themes\Theme1\js\jquery.min.js" />
+    <Content Include="App_Themes\Theme1\js\jquery.noty.js" />
+    <Content Include="App_Themes\Theme1\js\jquery.noty.packaged.min.js" />
+    <Content Include="App_Themes\Theme1\js\jquery.uploadify.js" />
+    <Content Include="App_Themes\Theme1\js\jquery.uploadify.min.js" />
+    <Content Include="App_Themes\Theme1\js\json2.js" />
+    <Content Include="App_Themes\Theme1\js\persianDatepicker.js" />
+    <Content Include="App_Themes\Theme1\js\Validators.js" />
+    <Content Include="App_Themes\Theme1\js\WaterMark.min.js" />
+    <Content Include="Controls\CtlAgreeExplanPrice.ascx" />
+    <Content Include="Controls\CtlAgreeExplanRepeat1.ascx" />
+    <Content Include="Controls\CtlAgreement.ascx" />
+    <Content Include="Controls\CtlAgreementFine.ascx" />
+    <Content Include="Controls\CtlAgreementPercent.ascx" />
+    <Content Include="Controls\CtlAgreePercentProtest.ascx" />
+    <Content Include="Controls\CtlAgreeStatus.ascx" />
+    <Content Include="Controls\CtlArea.ascx" />
+    <Content Include="Controls\CtlDatePicker.ascx" />
+    <Content Include="Controls\CtlExpalnPark.ascx" />
+    <Content Include="Controls\CtlExplanSubject.ascx" />
+    <Content Include="Controls\CtlPark.ascx" />
+    <Content Include="Controls\CtlPeyman.ascx" />
+    <Content Include="Controls\CtlPrice.ascx" />
+    <Content Include="Controls\CtlSubject.ascx" />
+    <Content Include="Controls\User\CtlUser.ascx" />
+    <Content Include="Controls\User\CtlUserPermission.ascx" />
+    <Content Include="Controls\User\CtlUserPPack.ascx" />
+    <Content Include="Controls\User\CtlUserRole.ascx" />
+    <Content Include="DashBoard.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="LoginMain.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Agree\AgreeArea.aspx.cs">
+      <DependentUpon>AgreeArea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agree\AgreeArea.aspx.designer.cs">
+      <DependentUpon>AgreeArea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Agree\AgreeFine.aspx.cs">
+      <DependentUpon>AgreeFine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agree\AgreeFine.aspx.designer.cs">
+      <DependentUpon>AgreeFine.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Agree\AgreePark.aspx.cs">
+      <DependentUpon>AgreePark.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agree\AgreePark.aspx.designer.cs">
+      <DependentUpon>AgreePark.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Agree\AgreePercent.aspx.cs">
+      <DependentUpon>AgreePercent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agree\AgreePercent.aspx.designer.cs">
+      <DependentUpon>AgreePercent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Agree\AgreeStatus.aspx.cs">
+      <DependentUpon>AgreeStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agree\AgreeStatus.aspx.designer.cs">
+      <DependentUpon>AgreeStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Agree\Archive.aspx.cs">
+      <DependentUpon>Archive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agree\Archive.aspx.designer.cs">
+      <DependentUpon>Archive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Agree\ArchivView.aspx.cs">
+      <DependentUpon>ArchivView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agree\ArchivView.aspx.designer.cs">
+      <DependentUpon>ArchivView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Agree\ExplanRequest.aspx.cs">
+      <DependentUpon>ExplanRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agree\ExplanRequest.aspx.designer.cs">
+      <DependentUpon>ExplanRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Agree\Price.aspx.cs">
+      <DependentUpon>Price.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agree\Price.aspx.designer.cs">
+      <DependentUpon>Price.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Agree\Repeat.aspx.cs">
+      <DependentUpon>Repeat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agree\Repeat.aspx.designer.cs">
+      <DependentUpon>Repeat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Agree\ReportMonth.aspx.cs">
+      <DependentUpon>ReportMonth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agree\ReportMonth.aspx.designer.cs">
+      <DependentUpon>ReportMonth.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Agree\Rep_PriceExpaln.aspx.cs">
+      <DependentUpon>Rep_PriceExpaln.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agree\Rep_PriceExpaln.aspx.designer.cs">
+      <DependentUpon>Rep_PriceExpaln.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bazras\AgreePercent.aspx.cs">
+      <DependentUpon>AgreePercent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bazras\AgreePercent.aspx.designer.cs">
+      <DependentUpon>AgreePercent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bazras\AgreePercent2.aspx.cs">
+      <DependentUpon>AgreePercent2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bazras\AgreePercent2.aspx.designer.cs">
+      <DependentUpon>AgreePercent2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bazras\AllPeyman.aspx.cs">
+      <DependentUpon>AllPeyman.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bazras\AllPeyman.aspx.designer.cs">
+      <DependentUpon>AllPeyman.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bazras\AllProtest.aspx.cs">
+      <DependentUpon>AllProtest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bazras\AllProtest.aspx.designer.cs">
+      <DependentUpon>AllProtest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bazras\ChangePass.aspx.cs">
+      <DependentUpon>ChangePass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bazras\ChangePass.aspx.designer.cs">
+      <DependentUpon>ChangePass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bazras\ExpalnRequest.aspx.cs">
+      <DependentUpon>ExpalnRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bazras\ExpalnRequest.aspx.designer.cs">
+      <DependentUpon>ExpalnRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bazras\khesarat.aspx.cs">
+      <DependentUpon>khesarat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bazras\khesarat.aspx.designer.cs">
+      <DependentUpon>khesarat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bazras\Price.aspx.cs">
+      <DependentUpon>Price.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bazras\Price.aspx.designer.cs">
+      <DependentUpon>Price.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CityZen\AccessDenied.aspx.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityZen\AccessDenied.aspx.designer.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CityZen\attach.aspx.cs">
+      <DependentUpon>attach.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityZen\attach.aspx.designer.cs">
+      <DependentUpon>attach.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CityZen\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityZen\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CityZen\DashBoard.aspx.cs">
+      <DependentUpon>DashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityZen\DashBoard.aspx.designer.cs">
+      <DependentUpon>DashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CityZen\DashBoard.Master.cs">
+      <DependentUpon>DashBoard.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityZen\DashBoard.Master.designer.cs">
+      <DependentUpon>DashBoard.Master</DependentUpon>
+    </Compile>
+    <Compile Include="CityZen\kartable.cs" />
+    <Compile Include="CityZen\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityZen\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CityZen\MapRegTree.aspx.cs">
+      <DependentUpon>MapRegTree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityZen\MapRegTree.aspx.designer.cs">
+      <DependentUpon>MapRegTree.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CityZen\PersonalView.aspx.cs">
+      <DependentUpon>PersonalView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityZen\PersonalView.aspx.designer.cs">
+      <DependentUpon>PersonalView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CityZen\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityZen\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CityZen\RegPerson.aspx.cs">
+      <DependentUpon>RegPerson.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityZen\RegPerson.aspx.designer.cs">
+      <DependentUpon>RegPerson.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CityZen\RegTree.aspx.cs">
+      <DependentUpon>RegTree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityZen\RegTree.aspx.designer.cs">
+      <DependentUpon>RegTree.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CityZen\RequestList.aspx.cs">
+      <DependentUpon>RequestList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityZen\RequestList.aspx.designer.cs">
+      <DependentUpon>RequestList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CityZen\UploadFile.ascx.cs">
+      <DependentUpon>UploadFile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CityZen\UploadFile.ascx.designer.cs">
+      <DependentUpon>UploadFile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Controls\CtlAgreePercent22.ascx.cs">
+      <DependentUpon>CtlAgreePercent22.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlAgreePercent22.ascx.designer.cs">
+      <DependentUpon>CtlAgreePercent22.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlAllSubjectExplan.ascx.cs">
+      <DependentUpon>CtlAllSubjectExplan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlAllSubjectExplan.ascx.designer.cs">
+      <DependentUpon>CtlAllSubjectExplan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctlArchiveDD.ascx.cs">
+      <DependentUpon>ctlArchiveDD.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ctlArchiveDD.ascx.designer.cs">
+      <DependentUpon>ctlArchiveDD.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlAttach.ascx.cs">
+      <DependentUpon>CtlAttach.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlAttach.ascx.designer.cs">
+      <DependentUpon>CtlAttach.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlExplanRequest.ascx.cs">
+      <DependentUpon>CtlExplanRequest.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlExplanRequest.ascx.designer.cs">
+      <DependentUpon>CtlExplanRequest.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlFromToDate.ascx.cs">
+      <DependentUpon>CtlFromToDate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlFromToDate.ascx.designer.cs">
+      <DependentUpon>CtlFromToDate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlPercentHistory.ascx.cs">
+      <DependentUpon>CtlPercentHistory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlPercentHistory.ascx.designer.cs">
+      <DependentUpon>CtlPercentHistory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlAbBaha.ascx.cs">
+      <DependentUpon>CtlAbBaha.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlAbBaha.ascx.designer.cs">
+      <DependentUpon>CtlAbBaha.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlAgeCalculation.ascx.cs">
+      <DependentUpon>CtlAgeCalculation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlAgeCalculation.ascx.designer.cs">
+      <DependentUpon>CtlAgeCalculation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlArzeshBasari.ascx.cs">
+      <DependentUpon>CtlArzeshBasari.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlArzeshBasari.ascx.designer.cs">
+      <DependentUpon>CtlArzeshBasari.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlCatalog.ascx.cs">
+      <DependentUpon>CtlCatalog.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlCatalog.ascx.designer.cs">
+      <DependentUpon>CtlCatalog.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlCut.ascx.cs">
+      <DependentUpon>CtlCut.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlCut.ascx.designer.cs">
+      <DependentUpon>CtlCut.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlDatePick.ascx.cs">
+      <DependentUpon>CtlDatePick.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlDatePick.ascx.designer.cs">
+      <DependentUpon>CtlDatePick.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlDropExplan.ascx.cs">
+      <DependentUpon>CtlDropExplan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlDropExplan.ascx.designer.cs">
+      <DependentUpon>CtlDropExplan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlEcotorism.ascx.cs">
+      <DependentUpon>CtlEcotorism.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlEcotorism.ascx.designer.cs">
+      <DependentUpon>CtlEcotorism.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlHaghighi.ascx.cs">
+      <DependentUpon>CtlHaghighi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlHaghighi.ascx.designer.cs">
+      <DependentUpon>CtlHaghighi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlKambodSaraneh.ascx.cs">
+      <DependentUpon>CtlKambodSaraneh.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlKambodSaraneh.ascx.designer.cs">
+      <DependentUpon>CtlKambodSaraneh.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlKhesarat.ascx.cs">
+      <DependentUpon>CtlKhesarat.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlKhesarat.ascx.designer.cs">
+      <DependentUpon>CtlKhesarat.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlLicensingTree.ascx.cs">
+      <DependentUpon>CtlLicensingTree.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlLicensingTree.ascx.designer.cs">
+      <DependentUpon>CtlLicensingTree.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlMahsolDaramad.ascx.cs">
+      <DependentUpon>CtlMahsolDaramad.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlMahsolDaramad.ascx.designer.cs">
+      <DependentUpon>CtlMahsolDaramad.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlNazar.ascx.cs">
+      <DependentUpon>CtlNazar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlNazar.ascx.designer.cs">
+      <DependentUpon>CtlNazar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlNegahdari.ascx.cs">
+      <DependentUpon>CtlNegahdari.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlNegahdari.ascx.designer.cs">
+      <DependentUpon>CtlNegahdari.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlPardakht.ascx.cs">
+      <DependentUpon>CtlPardakht.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlPardakht.ascx.designer.cs">
+      <DependentUpon>CtlPardakht.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlPersonal.ascx.cs">
+      <DependentUpon>CtlPersonal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlPersonal.ascx.designer.cs">
+      <DependentUpon>CtlPersonal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlPEymanPark.ascx.cs">
+      <DependentUpon>CtlPEymanPark.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlPEymanPark.ascx.designer.cs">
+      <DependentUpon>CtlPEymanPark.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Ctlpp.ascx.cs">
+      <DependentUpon>Ctlpp.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Ctlpp.ascx.designer.cs">
+      <DependentUpon>Ctlpp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlRegionPark.ascx.cs">
+      <DependentUpon>CtlRegionPark.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlRegionPark.ascx.designer.cs">
+      <DependentUpon>CtlRegionPark.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlPersonOnly.ascx.cs">
+      <DependentUpon>CtlPersonOnly.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlPersonOnly.ascx.designer.cs">
+      <DependentUpon>CtlPersonOnly.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlRotbal.ascx.cs">
+      <DependentUpon>CtlRotbal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlRotbal.ascx.designer.cs">
+      <DependentUpon>CtlRotbal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlSakhtikar.ascx.cs">
+      <DependentUpon>CtlSakhtikar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlSakhtikar.ascx.designer.cs">
+      <DependentUpon>CtlSakhtikar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlSupply.ascx.cs">
+      <DependentUpon>CtlSupply.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlSupply.ascx.designer.cs">
+      <DependentUpon>CtlSupply.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlTreeBonCutting.ascx.cs">
+      <DependentUpon>CtlTreeBonCutting.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TreeControls\CtlTreeBonCutting.ascx.designer.cs">
+      <DependentUpon>CtlTreeBonCutting.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WebUserControl1.ascx.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\WebUserControl1.ascx.designer.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ESRI3TestPage.aspx.cs">
+      <DependentUpon>ESRI3TestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ESRI3TestPage.aspx.designer.cs">
+      <DependentUpon>ESRI3TestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GreenSpaceDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GreenSpaceDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginCityZen.aspx.cs">
+      <DependentUpon>LoginCityZen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginCityZen.aspx.designer.cs">
+      <DependentUpon>LoginCityZen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Agreement.aspx.cs">
+      <DependentUpon>Agreement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Agreement.aspx.designer.cs">
+      <DependentUpon>Agreement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Area.aspx.cs">
+      <DependentUpon>Area.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Area.aspx.designer.cs">
+      <DependentUpon>Area.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\AreaAll.aspx.cs">
+      <DependentUpon>AreaAll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\AreaAll.aspx.designer.cs">
+      <DependentUpon>AreaAll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\AreaExel.aspx.cs">
+      <DependentUpon>AreaExel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\AreaExel.aspx.designer.cs">
+      <DependentUpon>AreaExel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\AreaSakhteman.aspx.cs">
+      <DependentUpon>AreaSakhteman.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\AreaSakhteman.aspx.designer.cs">
+      <DependentUpon>AreaSakhteman.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Catalog.aspx.cs">
+      <DependentUpon>Catalog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Catalog.aspx.designer.cs">
+      <DependentUpon>Catalog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\DefaultPrice.aspx.cs">
+      <DependentUpon>DefaultPrice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\DefaultPrice.aspx.designer.cs">
+      <DependentUpon>DefaultPrice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\DefaultRepeat.aspx.cs">
+      <DependentUpon>DefaultRepeat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\DefaultRepeat.aspx.designer.cs">
+      <DependentUpon>DefaultRepeat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\ExelRefahi.aspx.cs">
+      <DependentUpon>ExelRefahi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\ExelRefahi.aspx.designer.cs">
+      <DependentUpon>ExelRefahi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Explain.aspx.cs">
+      <DependentUpon>Explain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Explain.aspx.designer.cs">
+      <DependentUpon>Explain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\explanRequest.aspx.cs">
+      <DependentUpon>explanRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\explanRequest.aspx.designer.cs">
+      <DependentUpon>explanRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Khesarat.aspx.cs">
+      <DependentUpon>Khesarat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Khesarat.aspx.designer.cs">
+      <DependentUpon>Khesarat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\OneExplainArea.aspx.cs">
+      <DependentUpon>OneExplainArea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\OneExplainArea.aspx.designer.cs">
+      <DependentUpon>OneExplainArea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Park.aspx.cs">
+      <DependentUpon>Park.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Park.aspx.designer.cs">
+      <DependentUpon>Park.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Peyman.aspx.cs">
+      <DependentUpon>Peyman.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Peyman.aspx.designer.cs">
+      <DependentUpon>Peyman.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\pppp.aspx.cs">
+      <DependentUpon>pppp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\pppp.aspx.designer.cs">
+      <DependentUpon>pppp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Tree\AbBaha.aspx.cs">
+      <DependentUpon>AbBaha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Tree\AbBaha.aspx.designer.cs">
+      <DependentUpon>AbBaha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Tree\AgeCalculation.aspx.cs">
+      <DependentUpon>AgeCalculation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Tree\AgeCalculation.aspx.designer.cs">
+      <DependentUpon>AgeCalculation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Tree\ArzeshBasari.aspx.cs">
+      <DependentUpon>ArzeshBasari.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Tree\ArzeshBasari.aspx.designer.cs">
+      <DependentUpon>ArzeshBasari.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Tree\CuttingTree.aspx.cs">
+      <DependentUpon>CuttingTree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Tree\CuttingTree.aspx.designer.cs">
+      <DependentUpon>CuttingTree.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Tree\EcoTorism.aspx.cs">
+      <DependentUpon>EcoTorism.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Tree\EcoTorism.aspx.designer.cs">
+      <DependentUpon>EcoTorism.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Tree\Haghighi.aspx.cs">
+      <DependentUpon>Haghighi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Tree\Haghighi.aspx.designer.cs">
+      <DependentUpon>Haghighi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Tree\KambodSaraneh.aspx.cs">
+      <DependentUpon>KambodSaraneh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Tree\KambodSaraneh.aspx.designer.cs">
+      <DependentUpon>KambodSaraneh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Tree\LicensingTree.aspx.cs">
+      <DependentUpon>LicensingTree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Tree\LicensingTree.aspx.designer.cs">
+      <DependentUpon>LicensingTree.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Tree\MahsolDaramad.aspx.cs">
+      <DependentUpon>MahsolDaramad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Tree\MahsolDaramad.aspx.designer.cs">
+      <DependentUpon>MahsolDaramad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Tree\Negahdari.aspx.cs">
+      <DependentUpon>Negahdari.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Tree\Negahdari.aspx.designer.cs">
+      <DependentUpon>Negahdari.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Tree\Personels.aspx.cs">
+      <DependentUpon>Personels.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Tree\Personels.aspx.designer.cs">
+      <DependentUpon>Personels.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Tree\Rotbal.aspx.cs">
+      <DependentUpon>Rotbal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Tree\Rotbal.aspx.designer.cs">
+      <DependentUpon>Rotbal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Tree\Sakhtikar.aspx.cs">
+      <DependentUpon>Sakhtikar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Tree\Sakhtikar.aspx.designer.cs">
+      <DependentUpon>Sakhtikar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Tree\Supply.aspx.cs">
+      <DependentUpon>Supply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Tree\Supply.aspx.designer.cs">
+      <DependentUpon>Supply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\AgreeMaster.master.cs">
+      <DependentUpon>AgreeMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Masters\AgreeMaster.master.designer.cs">
+      <DependentUpon>AgreeMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\Bazras.master.cs">
+      <DependentUpon>Bazras.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Masters\Bazras.master.designer.cs">
+      <DependentUpon>Bazras.master</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\MainMaster.Master.cs">
+      <DependentUpon>MainMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Masters\MainMaster.Master.designer.cs">
+      <DependentUpon>MainMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\DashBordMaster.Master.cs">
+      <DependentUpon>DashBordMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Masters\DashBordMaster.Master.designer.cs">
+      <DependentUpon>DashBordMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlAgreeExplanPrice.ascx.cs">
+      <DependentUpon>CtlAgreeExplanPrice.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlAgreeExplanPrice.ascx.designer.cs">
+      <DependentUpon>CtlAgreeExplanPrice.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlAgreeExplanRepeat1.ascx.cs">
+      <DependentUpon>CtlAgreeExplanRepeat1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlAgreeExplanRepeat1.ascx.designer.cs">
+      <DependentUpon>CtlAgreeExplanRepeat1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlAgreement.ascx.cs">
+      <DependentUpon>CtlAgreement.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlAgreement.ascx.designer.cs">
+      <DependentUpon>CtlAgreement.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlAgreementFine.ascx.cs">
+      <DependentUpon>CtlAgreementFine.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlAgreementFine.ascx.designer.cs">
+      <DependentUpon>CtlAgreementFine.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlAgreementPercent.ascx.cs">
+      <DependentUpon>CtlAgreementPercent.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlAgreementPercent.ascx.designer.cs">
+      <DependentUpon>CtlAgreementPercent.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlAgreePercentProtest.ascx.cs">
+      <DependentUpon>CtlAgreePercentProtest.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlAgreePercentProtest.ascx.designer.cs">
+      <DependentUpon>CtlAgreePercentProtest.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlAgreeStatus.ascx.cs">
+      <DependentUpon>CtlAgreeStatus.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlAgreeStatus.ascx.designer.cs">
+      <DependentUpon>CtlAgreeStatus.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlArea.ascx.cs">
+      <DependentUpon>CtlArea.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlArea.ascx.designer.cs">
+      <DependentUpon>CtlArea.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlDatePicker.ascx.cs">
+      <DependentUpon>CtlDatePicker.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlDatePicker.ascx.designer.cs">
+      <DependentUpon>CtlDatePicker.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlExpalnPark.ascx.cs">
+      <DependentUpon>CtlExpalnPark.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlExpalnPark.ascx.designer.cs">
+      <DependentUpon>CtlExpalnPark.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlExplanSubject.ascx.cs">
+      <DependentUpon>CtlExplanSubject.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlExplanSubject.ascx.designer.cs">
+      <DependentUpon>CtlExplanSubject.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlPark.ascx.cs">
+      <DependentUpon>CtlPark.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlPark.ascx.designer.cs">
+      <DependentUpon>CtlPark.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlPeyman.ascx.cs">
+      <DependentUpon>CtlPeyman.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlPeyman.ascx.designer.cs">
+      <DependentUpon>CtlPeyman.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlPrice.ascx.cs">
+      <DependentUpon>CtlPrice.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlPrice.ascx.designer.cs">
+      <DependentUpon>CtlPrice.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CtlSubject.ascx.cs">
+      <DependentUpon>CtlSubject.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CtlSubject.ascx.designer.cs">
+      <DependentUpon>CtlSubject.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\User\CtlUser.ascx.cs">
+      <DependentUpon>CtlUser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\User\CtlUser.ascx.designer.cs">
+      <DependentUpon>CtlUser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\User\CtlUserPermission.ascx.cs">
+      <DependentUpon>CtlUserPermission.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\User\CtlUserPermission.ascx.designer.cs">
+      <DependentUpon>CtlUserPermission.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\User\CtlUserPPack.ascx.cs">
+      <DependentUpon>CtlUserPPack.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\User\CtlUserPPack.ascx.designer.cs">
+      <DependentUpon>CtlUserPPack.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\User\CtlUserRole.ascx.cs">
+      <DependentUpon>CtlUserRole.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\User\CtlUserRole.ascx.designer.cs">
+      <DependentUpon>CtlUserRole.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoard.aspx.cs">
+      <DependentUpon>DashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DashBoard.aspx.designer.cs">
+      <DependentUpon>DashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="LoginMain.aspx.cs">
+      <DependentUpon>LoginMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginMain.aspx.designer.cs">
+      <DependentUpon>LoginMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\WizardDashboard.Master.cs">
+      <DependentUpon>WizardDashboard.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Masters\WizardDashboard.Master.designer.cs">
+      <DependentUpon>WizardDashboard.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RegPersonal.aspx.cs">
+      <DependentUpon>RegPersonal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegPersonal.aspx.designer.cs">
+      <DependentUpon>RegPersonal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CtlFromDateToDate.ascx.cs">
+      <DependentUpon>CtlFromDateToDate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\CtlFromDateToDate.ascx.designer.cs">
+      <DependentUpon>CtlFromDateToDate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DsDiagram.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsDiagram.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DS_Agree.Designer.cs" />
+    <Compile Include="Report\Ds_ExplainPrice.Designer.cs" />
+    <Compile Include="Report\RepMaster.master.cs">
+      <DependentUpon>RepMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\RepMaster.master.designer.cs">
+      <DependentUpon>RepMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportSelect.aspx.cs">
+      <DependentUpon>ReportSelect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ReportSelect.aspx.designer.cs">
+      <DependentUpon>ReportSelect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportTree\CuttingTree.aspx.cs">
+      <DependentUpon>CuttingTree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ReportTree\CuttingTree.aspx.designer.cs">
+      <DependentUpon>CuttingTree.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportTree\License.aspx.cs">
+      <DependentUpon>License.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ReportTree\License.aspx.designer.cs">
+      <DependentUpon>License.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportTree\RemMasterTree.master.cs">
+      <DependentUpon>RemMasterTree.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ReportTree\RemMasterTree.master.designer.cs">
+      <DependentUpon>RemMasterTree.master</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportTree\ReportViewTree.aspx.cs">
+      <DependentUpon>ReportViewTree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ReportTree\ReportViewTree.aspx.designer.cs">
+      <DependentUpon>ReportViewTree.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportView.aspx.cs">
+      <DependentUpon>ReportView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ReportView.aspx.designer.cs">
+      <DependentUpon>ReportView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportView2.aspx.cs">
+      <DependentUpon>ReportView2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ReportView2.aspx.designer.cs">
+      <DependentUpon>ReportView2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Rep_Dashbord.aspx.cs">
+      <DependentUpon>Rep_Dashbord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\Rep_Dashbord.aspx.designer.cs">
+      <DependentUpon>Rep_Dashbord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\SubjectPrice.aspx.cs">
+      <DependentUpon>SubjectPrice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\SubjectPrice.aspx.designer.cs">
+      <DependentUpon>SubjectPrice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\testt.aspx.cs">
+      <DependentUpon>testt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\testt.aspx.designer.cs">
+      <DependentUpon>testt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="spDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>spDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="spRepArea.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>spRepArea.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SSRSS.cs" />
+    <Compile Include="SubjectPriceDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SubjectPriceDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="User\PermissionPack.aspx.cs">
+      <DependentUpon>PermissionPack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\PermissionPack.aspx.designer.cs">
+      <DependentUpon>PermissionPack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\User.aspx.designer.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\USerPerMission.aspx.cs">
+      <DependentUpon>USerPerMission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\USerPerMission.aspx.designer.cs">
+      <DependentUpon>USerPerMission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SaraWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WebService1.asmx.cs">
+      <DependentUpon>WebService1.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebService\AgreePercent.asmx.cs">
+      <DependentUpon>AgreePercent.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebService\AgreeProtest.asmx.cs">
+      <DependentUpon>AgreeProtest.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebService\SubjectExplan.asmx.cs">
+      <DependentUpon>SubjectExplan.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebService\UserWS.asmx.cs">
+      <DependentUpon>UserWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="App_Themes\Theme1\Css\NewFolder1\" />
+    <Folder Include="Models\" />
+    <Folder Include="Upload\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GreenSpaceBLL\GreenSpaceBLL.csproj">
+      <Project>{3ea9d047-e35d-4ed2-b360-0b878c20a0dc}</Project>
+      <Name>GreenSpaceBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GreenSpaceCL\GreenSpaceCL.csproj">
+      <Project>{d8043cca-39b0-4974-96e1-e9445125723a}</Project>
+      <Name>GreenSpaceCL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GreenSpaceDAL\GreenSpaceDAL.csproj">
+      <Project>{e3f31e9f-2547-48d0-adc6-313841510c8f}</Project>
+      <Name>GreenSpaceDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Report\Report1.rdlc" />
+    <EmbeddedResource Include="Report\Report2.rdlc" />
+    <EmbeddedResource Include="Report\ReportTree\Rp_Cutting.rdlc" />
+    <EmbeddedResource Include="Report\ReportTree\Rp_License.rdlc" />
+    <EmbeddedResource Include="Report\RptSumPayPage.rdlc" />
+    <EmbeddedResource Include="Report\Rp_Area.rdlc" />
+    <EmbeddedResource Include="Report\Rp_ExplainPrice.rdlc" />
+    <EmbeddedResource Include="Report\Rp_ExplainPrice2.rdlc" />
+    <EmbeddedResource Include="Report\Rp_Khesarat.rdlc" />
+    <EmbeddedResource Include="Report\Rp_Park.rdlc" />
+    <EmbeddedResource Include="Report\Rp_Percent.rdlc" />
+    <EmbeddedResource Include="Report\Rp_Peyman.rdlc" />
+    <EmbeddedResource Include="Report\Rp_Price2.rdlc" />
+    <EmbeddedResource Include="Report\Rp_SubjectPrice.rdlc" />
+    <EmbeddedResource Include="Report\SumPay2.rdlc" />
+    <EmbeddedResource Include="Report\SumPay.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://esup.qom.ir/SrvQom/Services/SrvShahrsaziGhom.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SaraWebService\</RelPath>
+      <UpdateFromURL>http://esup.qom.ir/SrvQom/Services/SrvShahrsaziGhom.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>GreenSpace_SaraWebService_SrvShahrsaziGhom</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1537</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:15370/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

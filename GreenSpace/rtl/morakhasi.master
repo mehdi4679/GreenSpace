@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/rtl/TaxiMaster.Master" AutoEventWireup="true" CodeBehind="morakhasi.master.cs" Inherits="Taxi.rtl.morakhasi" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">  
+    
+</asp:Content>
+<asp:Content ID="ccc" ContentPlaceHolderID="topMenuProfile" runat="server" >
+        
+   <%-- <uc1:CtlCartop ID="Ctlcartop1" runat="server" />--%>
+              
+    
+     
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="subMaster" runat="server">
+    <div class="headerMenu"   >
+         
+            <%--======top menu========--%>
+               <!-- Static navbar -->
+
+
+          
+
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li  ><a href="/Morakhasi/Partner.aspx?Pname=تعریف دفاتر پیشخوان">تعریف دفاتر پیشخوان </a></li>
+                <li><a href="/Morakhasi/CancelVacation.aspx?Pname=کنسل کردن مرخصی">کنسل کردن مرخصی</a></li>
+              <li><a href="/Morakhasi/Sequential.aspx?Pname=حداکثر توای مرخصی">حداکثر توای مرخصی</a></li>
+              <li><a href="/Morakhasi/Price.aspx?Pname=تعرفه های دفاتر">تعرفه های دفاتر</a></li>
+
+
+
+             <%-- <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">روزهای راننده <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+              
+
+              </ul>
+              </li>--%>
+    
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+          <%--=============--%>
+        </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <asp:ContentPlaceHolder id="CarContent" runat="server" >
+
+</asp:ContentPlaceHolder>
+</asp:Content>
+
