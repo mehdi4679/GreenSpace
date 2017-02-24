@@ -260,7 +260,8 @@ namespace GreenSpace.Controls
             ClAgreementPercent cl = new ClAgreementPercent();
             cl.AgreementID = Convert.ToInt32(AgreementID);
             cl.ExplainID = Convert.ToInt32(ExpanlID);
-            DataSet ds = AgreementPercentClass.GetList(cl);
+            cl.VisitDate = DateConvert.sh2m(txtDate.Value).ToString();
+            DataSet ds = AgreementPercentClass.GetList_inmonth(cl);
             GridAllPercent.DataSource  = ds;
             GridAllPercent.DataBind();
             LightBox4.Value = "1";

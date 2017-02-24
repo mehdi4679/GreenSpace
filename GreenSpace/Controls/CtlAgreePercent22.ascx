@@ -4,6 +4,8 @@
 <%@ Register Src="~/Controls/CtlPercentHistory.ascx" TagPrefix="uc1" TagName="CtlPercentHistory" %>
 <%@ Register src="CtlAgreePercentProtest.ascx" tagname="CtlAgreePercentProtest" tagprefix="uc3" %>
  
+
+
 <div >
      <asp:Label ID="Label2" runat="server" Text="Label" Visible="false"></asp:Label>
      <asp:Label ID="Label1" runat="server" Text="Label" Visible="false"></asp:Label>
@@ -123,20 +125,26 @@
         </ItemTemplate></asp:TemplateField>
 
     <asp:TemplateField HeaderText="عملکرد-پیمانکار" >
-        <ItemTemplate><asp:TextBox runat="server" ID="txtUnitNumberPeymankar" Text='<%# Eval("UnitNumberPeymankar").ToString() %>' Width="100"   CssClass="txt" ReadOnly="true" Enabled="false"></asp:TextBox></ItemTemplate>
+        <ItemTemplate><asp:TextBox runat="server" ID="txtUnitNumberPeymankar" Text='<%# Eval("UnitNumberPeymankar").ToString() %>' Width="90"   CssClass="txt" ReadOnly="true" Enabled="false"></asp:TextBox></ItemTemplate>
     </asp:TemplateField>
 
-    <asp:TemplateField HeaderText="عملکرد-نظارت" >
-        <ItemTemplate><asp:TextBox runat="server" ID="txtunitNumberNazer" Text='<%# Eval("unitNumberNazer2").ToString() %>'  Width="100"  CssClass="txt"></asp:TextBox></ItemTemplate>
+
+        <asp:TemplateField HeaderText="سقف متراژ" >
+         <ItemTemplate><asp:Label ID="txtlablnumbernazer" runat="server"  Text='<%# Eval("lablnumbernazer").ToString() %>' Font-Size="Medium" Width="60"></asp:Label> </ItemTemplate>
+
     </asp:TemplateField>
 
+
+
+    <asp:TemplateField HeaderText="عملکرد-نظارت"  >
+        <ItemTemplate><asp:TextBox runat="server" ID="txtunitNumberNazer" Text='<%# Eval("unitNumberNazer2").ToString() %>'      Width="90"  CssClass="txt"></asp:TextBox>    </ItemTemplate>
+    </asp:TemplateField>
 
      <asp:TemplateField HeaderText="درصد کیفیت">
         <ItemTemplate>
              <asp:TextBox runat="server" ID="txtutilityPersent" Text='<%# Eval("utilityPersent").ToString() %>'  CssClass="txt" Width="40" ></asp:TextBox>
         </ItemTemplate>
     </asp:TemplateField>
-
      
 
      <asp:TemplateField  HeaderText="متراژ یا تعداد جریمه" >

@@ -47,6 +47,7 @@ namespace GreenSpace.Controls
         {
 
             DDExplanID.Bind();
+            //DDExplanID.Attributes.Add();
            ClAgreement cl=new ClAgreement();
            
             DDAgreementID.DataSource = AgreementClass.GetList(cl);
@@ -268,11 +269,38 @@ namespace GreenSpace.Controls
             
         }
 
-        
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            ClAgreeExplanPrice cl = new ClAgreeExplanPrice();
+            //cl.PriceDayExplan = Convert.ToInt32(TXTPriceDayExplan.Text);
+            //cl.PriceNightExplan = Convert.ToInt32(TXTPriceNightExplan.Text == "" ? "0" : TXTPriceNightExplan.Text);
+            //cl.ExplanID = Convert.ToInt32(DDExplanID.SelectedValue);
+            cl.SubjectID = Convert.ToInt32(ddsubject.SelectedValue);
+            cl.AgreementID = Convert.ToInt32(lblagreementID.Text);
+           // cl.ExplanPriceID = Convert.ToInt32(LblParamExplanPriceID.Text);
+
+            //  cl = Data;
+
+            int t = 0;
+        //    if (CSharp.PublicFunction.ModeInsert(ExplanPriceID.ToString()))
+                t = AgreeExplanPriceClass.insert_all(cl);
+
+            if (t == 0)
+            {
+                Label1.ForeColor = System.Drawing.Color.Red;
+                Label1.Text = "خطا در ثبت";
+            }
+            else
+            {
+                Label1.ForeColor = System.Drawing.Color.Green;
+                Label1.Text = "ثبت  انجام شد.";
+                BindGrid();
+            }
+           // LightBox.Value = "0";
 
 
+            //LblParamExplanPriceID.Text = "0";
 
-
-
+        }
     }
 }

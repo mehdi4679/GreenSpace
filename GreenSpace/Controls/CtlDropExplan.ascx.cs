@@ -77,10 +77,11 @@ namespace GreenSpace.Controls
             DDExplan.DataSource = dss;
         DDExplan.DataTextField = "ExplainName";
         DDExplan.DataValueField = "ExplainSubjectID";
-   //     lblunitnumberkol.Text = dss.Tables[0].Rows[0]["unitnumberkol"].ToString();
-
+            //     lblunitnumberkol.Text = dss.Tables[0].Rows[0]["unitnumberkol"].ToString();
         DDExplan.DataBind();
-        if (E_ExpalnChange != null)
+           // if (DDExplan.Items.Count > 0)
+             //   DDExplan.Items.Add("همه موارد");
+            if (E_ExpalnChange != null)
             try
             {
                 E_ExpalnChange();

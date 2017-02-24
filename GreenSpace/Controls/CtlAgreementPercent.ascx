@@ -1,11 +1,15 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CtlAgreementPercent.ascx.cs" Inherits="GreenSpace.Controls.CtlAgreementPercent" %>
-    <%@ Register src="CtlDropExplan.ascx" tagname="CtlDropExplan" tagprefix="uc1" %>
+
+
+<%@ Register src="CtlDropExplan.ascx" tagname="CtlDropExplan" tagprefix="uc1" %>
     <%@ Register src="CtlDatePick.ascx" tagname="CtlDatePick" tagprefix="uc2" %>
   <%@ Register Src="~/Controls/CtlPercentHistory.ascx" TagPrefix="uc1" TagName="CtlPercentHistory" %>
  
 
 <%@ Register src="CtlAgreePercentProtest.ascx" tagname="CtlAgreePercentProtest" tagprefix="uc3" %>
- 
+
+
+    
 <div >
      <asp:Label ID="LblParamAgreementPercentID"  Visible="false" runat="server" Text="0" ></asp:Label>
      <asp:Label ID="lblAgreement"  Visible="false" runat="server"  Text="0"></asp:Label> 
@@ -15,7 +19,8 @@
 
     <asp:Button runat="server" Visible="false"  ID="btnSerachLight"  Text="جستجو" SkinID="hbtn-search-r"/> 
         <uc1:CtlDropExplan ID="DDExplainID" runat="server" />
-    </div >
+   
+</div >
     <div >
          
 

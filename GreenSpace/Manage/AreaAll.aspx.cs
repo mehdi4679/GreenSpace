@@ -194,7 +194,7 @@ namespace GreenSpace.Manage
             if (UnitNumber == null)
                 UnitNumber = "";
 
-            if (UnitNumber != "")
+           // if (UnitNumber != "")
             {
                 int retval = 0;
                 ClArea cl = new ClArea();
@@ -217,8 +217,8 @@ namespace GreenSpace.Manage
 
                 return retval;
             }
-            else
-                return 1;
+            //else
+              //  return 1;
         }
 
         protected void ddPeyman_SelectedIndexChanged(object sender, EventArgs e)
