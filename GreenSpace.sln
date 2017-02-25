@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenSpace", "GreenSpace\GreenSpace.csproj", "{262E936F-7566-471E-A3EE-1B78F0B115A6}"
 EndProject
@@ -36,23 +36,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 5
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://tarsimrayan.visualstudio.com/
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = GreenSpace\\GreenSpace.csproj
-		SccProjectName1 = GreenSpace
-		SccLocalPath1 = GreenSpace
-		SccProjectUniqueName2 = GreenSpaceBLL\\GreenSpaceBLL.csproj
-		SccProjectName2 = GreenSpaceBLL
-		SccLocalPath2 = GreenSpaceBLL
-		SccProjectUniqueName3 = GreenSpaceCL\\GreenSpaceCL.csproj
-		SccProjectName3 = GreenSpaceCL
-		SccLocalPath3 = GreenSpaceCL
-		SccProjectUniqueName4 = GreenSpaceDAL\\GreenSpaceDAL.csproj
-		SccProjectName4 = GreenSpaceDAL
-		SccLocalPath4 = GreenSpaceDAL
 	EndGlobalSection
 EndGlobal

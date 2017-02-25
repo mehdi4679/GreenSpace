@@ -10,7 +10,7 @@ using GreenSpaceBLL;
 using GreenSpaceCL;
 using System.Data;
 using System.Web.UI.HtmlControls;
-
+using System.Data.SqlClient;
 
 
 
@@ -24,9 +24,27 @@ namespace GreenSpace.Controls
         protected void Page_Load(object sender, EventArgs e)
         {
 
-         //    DDExplainFilter.E_ExpalnChange += changeExpalin;
-            DDExplainID.E_ExpalnChange +=new CtlDropExplan.call( BindGrid );
-            RowColor();
+            if (!Page.IsPostBack)
+            {
+                var now1 = PersianDateTime.Now;
+                var today1 = now1.ToString(PersianDateTimeFormat.Date);
+                txtdatetimenow.Attributes["onclick"] = "PersianDatePicker.Show(this,'" + today1 + "');";
+                txtdatetimenow.Text = today1;
+                BindGrid();
+            }
+            else {
+                var now = PersianDateTime.Now;
+                var today = now.ToString(PersianDateTimeFormat.Date);
+
+                txtdatetimenow.Attributes["onclick"] = "PersianDatePicker.Show(this,'" + today + "');";
+
+
+
+
+                //    DDExplainFilter.E_ExpalnChange += changeExpalin;
+                DDExplainID.E_ExpalnChange += new CtlDropExplan.call(BindGrid);
+                RowColor();
+            }
         }
 
         private void changeExpalin(object sender, EventArgs e)
@@ -204,10 +222,10 @@ namespace GreenSpace.Controls
            
 
             cl.ExplainID = DDExplainID.SelectedValue;
+            cl.VisitDate = DateConvert.sh2m(txtdatetimenow.Text).ToString();
 
 
-                
-            DataSet ds = AgreementPercentClass.GetList(cl);
+            DataSet ds = AgreementPercentClass.GetList_inmonth(cl);
             DataView dv = new DataView(ds.Tables[0]);
             if (ViewState["AgreementPercentID"] == null)
             {
@@ -407,5 +425,11 @@ namespace GreenSpace.Controls
             Bindtbljarime();
         }
 
+ 
+
+        protected void Buttonsearch_Click(object sender, EventArgs e)
+        {
+            BindGrid();
+        }
     }
 }

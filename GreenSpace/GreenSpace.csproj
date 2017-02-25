@@ -80,6 +80,9 @@
       <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\Microsoft.ReportViewer.WinForms.DLL</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="PersianDateTime">
+      <HintPath>pakage\PersianDateTime.1.1.5082.36395\lib\net40\PersianDateTime.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -897,6 +900,12 @@
     <Content Include="1.rdlc">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\calendar.js" />
+    <Content Include="Scripts\DatePicker\calendar.js" />
+    <Content Include="Scripts\DatePicker\jquery.ui.datepicker-cc-fa.js" />
+    <Content Include="Scripts\DatePicker\jquery.ui.datepicker-cc.js" />
     <Content Include="Scripts\footable.min.css" />
     <Content Include="Scripts\footable.min.js" />
     <Content Include="Scripts\init.js" />
@@ -972,16 +981,33 @@
       <DependentUpon>DsDiagram.xsd</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\jalaali.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\jquery-latest.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery.Bootstrap-PersianDateTimePicker.css" />
+    <Content Include="Scripts\jquery.Bootstrap-PersianDateTimePicker.js" />
+    <Content Include="Scripts\jquery.Bootstrap-PersianDateTimePicker.min.css" />
     <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.ui.datepicker-cc-fa.js" />
+    <Content Include="Scripts\jquery.ui.datepicker-cc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\kendo.dataviz.min.js" />
     <Content Include="Scripts\map.js" />
     <Content Include="Scripts\mapCopy.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\ol.js" />
     <None Include="Scripts\_references.js" />
+    <Content Include="Scripts\PersianDatePicker.css" />
+    <Content Include="Scripts\persianDatepicker.js" />
+    <Content Include="Scripts\PersianDatePicker.min.css" />
+    <Content Include="Scripts\PersianDatePicker.min.js" />
+    <Content Include="Scripts\script.js" />
+    <Content Include="Scripts\ui.jqgrid.css" />
     <Content Include="Script\AlmostafaScript.js" />
     <Content Include="Script\Catalog.js" />
     <Content Include="Script\DesktopNotify.js" />

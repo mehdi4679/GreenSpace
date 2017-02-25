@@ -4,16 +4,38 @@
 <%@ Register src="CtlDropExplan.ascx" tagname="CtlDropExplan" tagprefix="uc1" %>
     <%@ Register src="CtlDatePick.ascx" tagname="CtlDatePick" tagprefix="uc2" %>
   <%@ Register Src="~/Controls/CtlPercentHistory.ascx" TagPrefix="uc1" TagName="CtlPercentHistory" %>
- 
-
 <%@ Register src="CtlAgreePercentProtest.ascx" tagname="CtlAgreePercentProtest" tagprefix="uc3" %>
 
 
+<%--<link href="../Scripts/jquery-ui.min.css" rel="stylesheet" />--%>
+<%--<script src="../Scripts/script.js"></script>
+<script src="../Scripts/jquery-latest.min.js"></script>--%>
+<script src="../Scripts/persianDatepicker.js"></script>
+<script src="../Scripts/PersianDatePicker.min.js"></script>
+<link href="../Scripts/PersianDatePicker.css" rel="stylesheet" />
+<link href="../Scripts/PersianDatePicker.min.css" rel="stylesheet" />
+<%--<link href="../Scripts/ui.jqgrid.css" rel="stylesheet" />--%>
+
+
+
+
+
+          <div class="row">
+        <div class="col-md-1">تاریخ:</div>
+        <div class="col-md-3"><asp:TextBox runat="server" Text="" ID="txtdatetimenow" class="form-control DatePik validate[required]" ></asp:TextBox></div>
+        <div class="col-md-1"><asp:Button ID="Buttonsearch" runat="server" OnClick="Buttonsearch_Click" Text="مشاهده" Width="64px" /></div>
+              </div>
+    </div>
+    
     
 <div >
      <asp:Label ID="LblParamAgreementPercentID"  Visible="false" runat="server" Text="0" ></asp:Label>
      <asp:Label ID="lblAgreement"  Visible="false" runat="server"  Text="0"></asp:Label> 
       <div runat="server" id="ddd" visible="false">   <asp:Label ID="ragree"   Visible="false" runat="server"  Text="0"></asp:Label>
+
+
+
+
 </div>
             <input type="button" runat="server" id="btninsetlightmain"  value="افزودن" onclick="openlight();"  SkinID="btnInsert"  />
 
