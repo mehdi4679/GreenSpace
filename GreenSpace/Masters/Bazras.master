@@ -317,7 +317,7 @@
                                       <li runat="server" id="LiItem" visible="false"> <a   href="/Bazras/ExpalnRequest.aspx?Pname=درخواست باز کردن شرح کار">درخواست باز کردن شرح کار</a> </li>
                                      <li runat="server" id="LiKhesarat"   visible="false"> <a   href="/Bazras/khesarat.aspx?Pname=وارد کردن خسارت">    خسارت</a> </li>
 
-
+                                    
                                     <li><a href="#" runat="server" id="aexit" onserverclick="aexit_ServerClick">خروج</a></li>
                                  </ul>
                             </div>

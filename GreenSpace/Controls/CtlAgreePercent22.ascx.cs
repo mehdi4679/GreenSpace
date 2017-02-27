@@ -309,7 +309,7 @@ namespace GreenSpace.Controls
             
             GridViewRow gr = null;
              string tt = "";
-            
+
             for (int i = 0; i < GridView1.Rows.Count; i++)
             {
                 gr = GridView1.Rows[i];
@@ -319,55 +319,60 @@ namespace GreenSpace.Controls
                 TextBox txtFineMeterOrRepeat = (TextBox)gr.FindControl("txtFineMeterOrRepeat");
                 TextBox txtJarimeComment = (TextBox)gr.FindControl("txtJarimeComment");
                 TextBox txtcommentdarsad = (TextBox)gr.FindControl("txtcommentdarsad");
-                int txtSuperVisorID =  SuperVisorID  ;
+                int txtSuperVisorID = SuperVisorID;
                 TextBox txtunitNumberNazer = (TextBox)gr.FindControl("txtunitNumberNazer");
                 TextBox txtutilityPersent = (TextBox)gr.FindControl("txtutilityPersent");
                 Label explansubjectid = (Label)gr.FindControl("lblExplainSubjectID");
                 Label lblerror = (Label)gr.FindControl("lblerror");
-               // TextBox txtUnitNumberPeymankar = (TextBox)gr.FindControl("txtUnitNumberPeymankar");
+                // TextBox txtUnitNumberPeymankar = (TextBox)gr.FindControl("txtUnitNumberPeymankar");
 
                 if (Convert.ToInt32(txtutilityPersent.Text == "" ? "0" : txtutilityPersent.Text) > 100)
                 {
                     txtutilityPersent.BackColor = System.Drawing.Color.Red;
                     return;
                 }
-                ClAgreementPercent cl = new ClAgreementPercent();
 
-               // TextBox txtVisitDate = (TextBox)gr.FindControl("txtVisitDate");
-                cl.AgreementPercentID=Convert.ToInt32( txtAgreementPercentID.Text=="" ? "0":txtAgreementPercentID.Text);
-                cl.FineFactor =  txtFineFactor.Text=="" ? "0":txtFineFactor.Text ;
-                cl.FineMeterOrRepeat = Convert.ToInt32(txtFineMeterOrRepeat.Text=="" ? "0":txtFineMeterOrRepeat.Text);
-                //cl.JarimeComment = txtJarimeComment.Text;
-                cl.commentdarsad = txtcommentdarsad.Text;
-                cl.SuperVisorID =  SuperVisorID==null?0: SuperVisorID;
-                cl.unitNumberNazer = Convert.ToDecimal(txtunitNumberNazer.Text=="" ? "0":txtunitNumberNazer.Text);
-                cl.utilityPersent = Convert.ToDecimal(txtutilityPersent.Text=="" ? "0.0":txtutilityPersent.Text);
-                cl.VisitDate =DateConvert.sh2m(txtDate.Value).ToString();
-                cl.AgreementID = Convert.ToInt32(lblAgreement.Text == "" ? "0" : lblAgreement.Text);
-                cl.ExplainID = Convert.ToInt32(explansubjectid.Text == "" ? "0" : explansubjectid.Text);
-                //if(SematID=="1")
-                //{
-                //    cl = new ClAgreementPercent();
-                //    cl.UnitNumberPeymankar = Convert.ToInt32(txtUnitNumberPeymankar.Text == "" ? "0" : txtUnitNumberPeymankar.Text);
-                //    cl.AgreementID = Convert.ToInt32(lblAgreement.Text == "" ? "0" : lblAgreement.Text);
-                //    cl.ExplainID = Convert.ToInt32(explansubjectid.Text == "" ? "0" : explansubjectid.Text);
-                //     cl.AgreementPercentID = Convert.ToInt32(txtAgreementPercentID.Text == "" ? "0" : txtAgreementPercentID.Text);
-                //}
-
-
-                tt = erroralert( Save(cl));
-                if (tt != "")
+                if (SematID != "1")
                 {
-                    gr.BackColor = System.Drawing.Color.Red;
-                    lblerror.Text = "اعلان";
-                    lblerror.Attributes["title"] = tt;
-                    lblerror.Attributes["placeholder"] = tt;
 
-                }
-                else
-                {
-                    gr.BackColor = System.Drawing.Color.Green;
-                    lblerror.Visible = false;
+                    ClAgreementPercent cl = new ClAgreementPercent();
+
+                    // TextBox txtVisitDate = (TextBox)gr.FindControl("txtVisitDate");
+                    cl.AgreementPercentID = Convert.ToInt32(txtAgreementPercentID.Text == "" ? "0" : txtAgreementPercentID.Text);
+                    cl.FineFactor = txtFineFactor.Text == "" ? "0" : txtFineFactor.Text;
+                    cl.FineMeterOrRepeat = Convert.ToInt32(txtFineMeterOrRepeat.Text == "" ? "0" : txtFineMeterOrRepeat.Text);
+                    //cl.JarimeComment = txtJarimeComment.Text;
+                    cl.commentdarsad = txtcommentdarsad.Text;
+                    cl.SuperVisorID = SuperVisorID == null ? 0 : SuperVisorID;
+                    cl.unitNumberNazer = Convert.ToDecimal(txtunitNumberNazer.Text == "" ? "0" : txtunitNumberNazer.Text);
+                    cl.utilityPersent = Convert.ToDecimal(txtutilityPersent.Text == "" ? "0.0" : txtutilityPersent.Text);
+                    cl.VisitDate = DateConvert.sh2m(txtDate.Value).ToString();
+                    cl.AgreementID = Convert.ToInt32(lblAgreement.Text == "" ? "0" : lblAgreement.Text);
+                    cl.ExplainID = Convert.ToInt32(explansubjectid.Text == "" ? "0" : explansubjectid.Text);
+                    //if(SematID=="1")
+                    //{
+                    //    cl = new ClAgreementPercent();
+                    //    cl.UnitNumberPeymankar = Convert.ToInt32(txtUnitNumberPeymankar.Text == "" ? "0" : txtUnitNumberPeymankar.Text);
+                    //    cl.AgreementID = Convert.ToInt32(lblAgreement.Text == "" ? "0" : lblAgreement.Text);
+                    //    cl.ExplainID = Convert.ToInt32(explansubjectid.Text == "" ? "0" : explansubjectid.Text);
+                    //     cl.AgreementPercentID = Convert.ToInt32(txtAgreementPercentID.Text == "" ? "0" : txtAgreementPercentID.Text);
+                    //}
+
+
+                    tt = erroralert(Save(cl));
+                    if (tt != "")
+                    {
+                        gr.BackColor = System.Drawing.Color.Red;
+                        lblerror.Text = "اعلان";
+                        lblerror.Attributes["title"] = tt;
+                        lblerror.Attributes["placeholder"] = tt;
+
+                    }
+                    else
+                    {
+                        gr.BackColor = System.Drawing.Color.Green;
+                        lblerror.Visible = false;
+                    }
                 }
             }
         }
