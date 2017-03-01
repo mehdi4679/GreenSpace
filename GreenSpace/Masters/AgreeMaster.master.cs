@@ -16,7 +16,8 @@ namespace GreenSpace.Masters
         {
             if (!Page.IsPostBack) {
                 ClAgreement cl = new ClAgreement();
-                 
+
+
                 cl.AgreementID =Convert.ToInt32(Request.QueryString["aid"].ToString()    ) ;
                 DataSet ds = AgreementClass.GetList(cl);
                 DataRow dr = ds.Tables[0].Rows[0];

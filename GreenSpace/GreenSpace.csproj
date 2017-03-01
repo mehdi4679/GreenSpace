@@ -80,8 +80,9 @@
       <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\Microsoft.ReportViewer.WinForms.DLL</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="PersianDateTime">
-      <HintPath>pakage\PersianDateTime.1.1.5082.36395\lib\net40\PersianDateTime.dll</HintPath>
+    <Reference Include="PersianDateTime, Version=1.1.5082.36395, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PersianDateTime.1.1.5082.36395\lib\net40\PersianDateTime.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />

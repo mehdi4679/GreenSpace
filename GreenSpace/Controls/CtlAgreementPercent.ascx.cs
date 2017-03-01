@@ -93,26 +93,42 @@ namespace GreenSpace.Controls
 
         public void BindDD()
         {
+            DateTime sd = DateTime.Now;
+            DateTime ed;
 
-            ClAgreement cl = new ClAgreement();
-            DDAgreementID.DataSource = AgreementClass.GetList(cl);
-            DDAgreementID.DataTextField = "AgreeName";
-            DDAgreementID.DataValueField = "AgreementID";
-            DDAgreementID.DataBind();
+            try
+            {
+                ClAgreement cl = new ClAgreement();
+                DDAgreementID.DataSource = AgreementClass.GetList(cl);
+                DDAgreementID.DataTextField = "AgreeName";
+                DDAgreementID.DataValueField = "AgreementID";
+                DDAgreementID.DataBind();
 
-            DDSuperVisorID.DataSource = TaxiDAL.UsersClass.GetListNazer(null, null, null, null, null, null, "600", null, null, null, null);
-            DDSuperVisorID.DataTextField = "FullNameUser";
-            DDSuperVisorID.DataValueField = "UserID";
-            DDSuperVisorID.DataBind();
+                DDSuperVisorID.DataSource = TaxiDAL.UsersClass.GetListNazer(null, null, null, null, null, null, "600", null, null, null, null);
+                DDSuperVisorID.DataTextField = "FullNameUser";
+                DDSuperVisorID.DataValueField = "UserID";
+                DDSuperVisorID.DataBind();
 
-            DDExplainID.Bind();
-            CtlAgreePercentProtest1.BindDD();
+                DDExplainID.Bind();
+                CtlAgreePercentProtest1.BindDD();
 
-            Bindtbljarime();
+                Bindtbljarime();
 
-            DDExplainID.AutoPostBackExplan = true;
-            
-            
+                DDExplainID.AutoPostBackExplan = true;
+            }
+            catch(Exception ex)
+            {
+                ed = DateTime.Now;
+                var lineNumber = new System.Diagnostics.StackTrace(ex, true).GetFrame(0).GetFileLineNumber();
+                clError cl = new clError();
+                cl.ErrorLog = ex.Message.ToString();
+                cl.Page = HttpContext.Current.Request.Url.OriginalString;
+                cl.timeLeft = (ed - sd).TotalSeconds.ToString();
+                cl.IP = CSharp.PublicFunction.GetIPAddress();
+                ErrorDAL.insert(cl);
+
+            }
+
         }
         public int onlyActive
         {
@@ -212,36 +228,48 @@ namespace GreenSpace.Controls
 
         public void BindGrid()
         {
-            ClAgreementPercent cl = new ClAgreementPercent();
-           
-
-            //if (NotDefaultAgree == false)
-            //    cl.AgreementID = 0;
-            //else
-                cl.AgreementID = Convert.ToInt32(AgreementID);
-           
-
-            cl.ExplainID = DDExplainID.SelectedValue;
-            cl.VisitDate = DateConvert.sh2m(txtdatetimenow.Text).ToString();
-
-
-            DataSet ds = AgreementPercentClass.GetList_inmonth(cl);
-            DataView dv = new DataView(ds.Tables[0]);
-            if (ViewState["AgreementPercentID"] == null)
+            DateTime sd = DateTime.Now;
+            DateTime ed;
+            try
             {
-                ViewState["AgreementPercentID"] = "AgreementPercentID Desc";
+                ClAgreementPercent cl = new ClAgreementPercent();
+                cl.AgreementID = Convert.ToInt32(AgreementID);
+
+
+                cl.ExplainID = DDExplainID.SelectedValue;
+                cl.VisitDate = DateConvert.sh2m(txtdatetimenow.Text).ToString();
+
+
+                DataSet ds = AgreementPercentClass.GetList_inmonth(cl);
+                DataView dv = new DataView(ds.Tables[0]);
+                if (ViewState["AgreementPercentID"] == null)
+                {
+                    ViewState["AgreementPercentID"] = "AgreementPercentID Desc";
+                }
+                dv.Sort = Securenamespace.SecureData.CheckSecurity(ViewState["AgreementPercentID"].ToString()).ToString();
+                GridView1.DataSource = dv;
+                GridView1.DataBind();
+
+                 txtunitNumberNazer.Text = unitNumberDEfault(Convert.ToInt32(AgreementID), Convert.ToInt32(DDExplainID.SelectedValue)).ToString();
+                LBLunitNumberNazer.Text = unitNumberDEfault(Convert.ToInt32(AgreementID), Convert.ToInt32(DDExplainID.SelectedValue)).ToString();
+
+
+                RowColor();
+                ds.Dispose();
+
             }
-            dv.Sort = Securenamespace.SecureData.CheckSecurity(ViewState["AgreementPercentID"].ToString()).ToString();
-            GridView1.DataSource = dv;
-            GridView1.DataBind();
+            catch(Exception ex)
+            {
+                ed = DateTime.Now;
+                var lineNumber = new System.Diagnostics.StackTrace(ex, true).GetFrame(0).GetFileLineNumber();
+                clError cl = new clError();
+                cl.ErrorLog = ex.Message.ToString();
+                cl.Page = HttpContext.Current.Request.Url.OriginalString;
+                cl.timeLeft = (ed - sd).TotalSeconds.ToString();
+                cl.IP = CSharp.PublicFunction.GetIPAddress();
+                ErrorDAL.insert(cl);
 
-            //if(ds.Tables[0].Rows.Count>0)
-            txtunitNumberNazer.Text = unitNumberDEfault(Convert.ToInt32(AgreementID),Convert.ToInt32(DDExplainID.SelectedValue)).ToString();
-             LBLunitNumberNazer.Text = unitNumberDEfault(Convert.ToInt32(AgreementID), Convert.ToInt32(DDExplainID.SelectedValue)).ToString();
-
-            
-            RowColor();
-            ds.Dispose();
+            }
         }
         private string  unitNumberDEfault(int agreeid, int explanid)
         {

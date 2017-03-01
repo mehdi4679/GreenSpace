@@ -5,6 +5,8 @@ using System.Security.Principal;
 using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
+using GreenSpaceCL;
+using GreenSpaceDAL;
 
 namespace GreenSpace
 {
@@ -40,30 +42,35 @@ namespace GreenSpace
 
         protected void Application_Error(object sender, EventArgs e)
         {
-         //    HttpException lastErrorWrapper = Server.GetLastError() as HttpException;
+            HttpException lastErrorWrapper = Server.GetLastError() as HttpException;
 
-         //   Exception lastError = lastErrorWrapper;
-         //   if (lastErrorWrapper.InnerException != null)
-         //       lastError = lastErrorWrapper.InnerException;
+            Exception lastError = lastErrorWrapper;
+            if (lastErrorWrapper.InnerException != null)
+                lastError = lastErrorWrapper.InnerException;
 
-         //   string lastErrorTypeName = lastError.GetType().ToString();
-         //   string lastErrorMessage = lastError.Message;
-         //   string lastErrorStackTrace = lastError.StackTrace;
-         //   string page = HttpContext.Current.Request.Url.OriginalString;
+            string lastErrorTypeName = lastError.GetType().ToString();
+            string lastErrorMessage = lastError.Message;
+            string lastErrorStackTrace = lastError.StackTrace;
+            string page = HttpContext.Current.Request.Url.OriginalString;
 
-         //   string sql = "    insert into Tbl_ErrorLog(ErrorLog,createDate)values(N'" + "pagr:"+page + Securenamespace.SecureData.CheckSecurity(lastErrorMessage.ToString() + "IP" + CSharp.PublicFunction.GetIPAddress().ToString()) + "',getdate())";
-         //   System.Data.SqlClient.SqlConnection cnn = new System.Data.SqlClient.SqlConnection(CSharp.PublicFunction.cnstr());
-         //   System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand(sql, cnn);
-         //   cmd.CommandType = System.Data.CommandType.Text;
+            clError cl = new clError();
+            cl.ErrorLog = lastErrorMessage+":Type:"+lastErrorTypeName+":ST:"+ lastErrorStackTrace;
+            cl.Page = page;
+            cl.IP = CSharp.PublicFunction.GetIPAddress();
+             //string sql = "    insert into Tbl_ErrorLog(ErrorLog,createDate)values(N'" + "pagr:" + page + Securenamespace.SecureData.CheckSecurity(lastErrorMessage.ToString() + "IP" + CSharp.PublicFunction.GetIPAddress().ToString()) + "',getdate())";
+            //System.Data.SqlClient.SqlConnection cnn = new System.Data.SqlClient.SqlConnection(CSharp.PublicFunction.cnstr());
+            //System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand(sql, cnn);
+            //cmd.CommandType = System.Data.CommandType.Text;
 
-         //   try
-         //   {
-         //       cnn.Open();
-         //       cmd.ExecuteNonQuery();
-         //   }
-         //   catch { }
-         //   finally { cnn.Close(); }
-         ////   Response.Redirect("~/ErrorPage.aspx");
+            try
+            {
+            int i = ErrorDAL.insert(cl);
+                //cnn.Open();
+                //cmd.ExecuteNonQuery();
+            }
+            catch { }
+            finally {  }
+            ////   Response.Redirect("~/ErrorPage.aspx");
 
         }
 

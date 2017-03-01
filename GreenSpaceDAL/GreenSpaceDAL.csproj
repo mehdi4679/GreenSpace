@@ -65,6 +65,7 @@
     <Compile Include="CuttingTreeClass.cs" />
     <Compile Include="CuttingTreeDAL2.cs" />
     <Compile Include="EkotorismClass.cs" />
+    <Compile Include="ErrorDAL.cs" />
     <Compile Include="ExpalnParkDAL.cs" />
     <Compile Include="ExplanPriceDAL.cs" />
     <Compile Include="ExplanRepeatDAL.cs" />

@@ -58,6 +58,7 @@
     <Compile Include="AreaCL.cs" />
     <Compile Include="AttachCL.cs" />
     <Compile Include="ClCatalog.cs" />
+    <Compile Include="clClass.cs" />
     <Compile Include="CuttingTree.cs" />
     <Compile Include="ExpalnParkCL.cs" />
     <Compile Include="ExplanPriceCL.cs" />
