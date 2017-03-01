@@ -744,6 +744,7 @@
     <Content Include="Bazras\ExpalnRequest.aspx" />
     <Content Include="Bazras\khesarat.aspx" />
     <Content Include="Bazras\Price.aspx" />
+    <Content Include="Bazras\repsel.aspx" />
     <Content Include="bin\ClosedXML.dll" />
     <Content Include="bin\DocumentFormat.OpenXml.dll" />
     <Content Include="bin\GreenSpace.dll" />
@@ -1375,6 +1376,13 @@
     </Compile>
     <Compile Include="Bazras\Price.aspx.designer.cs">
       <DependentUpon>Price.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bazras\repsel.aspx.cs">
+      <DependentUpon>repsel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Bazras\repsel.aspx.designer.cs">
+      <DependentUpon>repsel.aspx</DependentUpon>
     </Compile>
     <Compile Include="CityZen\AccessDenied.aspx.cs">
       <DependentUpon>AccessDenied.aspx</DependentUpon>

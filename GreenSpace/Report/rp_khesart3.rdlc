@@ -93,22 +93,22 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>0.63772in</Width>
+                  <Width>0.76932in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.7724in</Width>
+                  <Width>0.904in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.57006in</Width>
+                  <Width>0.70166in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.64313in</Width>
+                  <Width>0.77473in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.08603in</Width>
+                  <Width>2.21763in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.49958in</Width>
+                  <Width>0.63118in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -341,12 +341,14 @@
                                 <TextRun>
                                   <Value>=Fields!PRFineDate.Value</Value>
                                   <Style>
-                                    <FontFamily>B Zar</FontFamily>
+                                    <FontFamily>B Mitra</FontFamily>
                                     <FontSize>8pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>PRFineDate</rd:DefaultName>
@@ -374,12 +376,13 @@
                                 <TextRun>
                                   <Value>=Fields!FinePrice.Value</Value>
                                   <Style>
-                                    <FontFamily>B Zar</FontFamily>
-                                    <FontSize>8pt</FontSize>
+                                    <FontFamily>B Mitra</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>FinePrice1</rd:DefaultName>
@@ -407,12 +410,13 @@
                                 <TextRun>
                                   <Value>=Fields!NumberFine.Value</Value>
                                   <Style>
-                                    <FontFamily>B Zar</FontFamily>
-                                    <FontSize>8pt</FontSize>
+                                    <FontFamily>B Mitra</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>NumberFine</rd:DefaultName>
@@ -440,12 +444,13 @@
                                 <TextRun>
                                   <Value>=Fields!FinePrice.Value</Value>
                                   <Style>
-                                    <FontFamily>B Zar</FontFamily>
-                                    <FontSize>8pt</FontSize>
+                                    <FontFamily>B Mitra</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>FinePrice</rd:DefaultName>
@@ -473,12 +478,13 @@
                                 <TextRun>
                                   <Value>=Fields!FineIDName.Value</Value>
                                   <Style>
-                                    <FontFamily>B Zar</FontFamily>
-                                    <FontSize>8pt</FontSize>
+                                    <FontFamily>B Mitra</FontFamily>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>FineIDName</rd:DefaultName>
@@ -506,12 +512,14 @@
                                 <TextRun>
                                   <Value>=RowNumber(Nothing)</Value>
                                   <Style>
-                                    <FontFamily>B Zar</FontFamily>
+                                    <FontFamily>B Mitra</FontFamily>
                                     <FontSize>8pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox29</rd:DefaultName>
@@ -520,6 +528,7 @@
                               <Color>LightGrey</Color>
                               <Style>Solid</Style>
                             </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -556,18 +565,92 @@
             <Top>0.06944in</Top>
             <Left>0.10417in</Left>
             <Height>0.5in</Height>
-            <Width>5.20891in</Width>
+            <Width>5.99852in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
             </Style>
           </Tablix>
+          <Textbox Name="Textbox24">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>جمع کل :</Value>
+                    <Style>
+                      <FontFamily>B Mitra</FontFamily>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>2.0977cm</Top>
+            <Left>4.93474cm</Left>
+            <Height>0.82705cm</Height>
+            <Width>1.3623cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+              <Direction>RTL</Direction>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox26">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Sum(Fields!FinePrice.Value, "DataSet1")</Value>
+                    <Style>
+                      <FontFamily>B Mitra</FontFamily>
+                      <FontSize>8pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>2.08555cm</Top>
+            <Left>3.20202cm</Left>
+            <Height>0.82705cm</Height>
+            <Width>1.62689cm</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+              <Direction>RTL</Direction>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>0.64964in</Height>
+        <Height>1.26422in</Height>
         <Style />
       </Body>
-      <Width>5.38396in</Width>
+      <Width>6.25896in</Width>
       <Page>
         <PageHeader>
           <Height>1.31728in</Height>
@@ -578,8 +661,8 @@
               <Source>Embedded</Source>
               <Value>Untitled1</Value>
               <Sizing>FitProportional</Sizing>
-              <Top>0cm</Top>
-              <Left>11.65125cm</Left>
+              <Top>0.35784cm</Top>
+              <Left>13.97618cm</Left>
               <Height>1.97247cm</Height>
               <Width>1.84396cm</Width>
               <Style>
@@ -609,8 +692,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox9</rd:DefaultName>
-              <Top>0.28728cm</Top>
-              <Left>0.71834cm</Left>
+              <Top>0.35784cm</Top>
+              <Left>2.21866cm</Left>
               <Height>1.24928cm</Height>
               <Width>10.68715cm</Width>
               <ZIndex>1</ZIndex>
@@ -644,8 +727,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>1.53656cm</Top>
-              <Left>2.8612cm</Left>
+              <Top>1.49443cm</Top>
+              <Left>4.68752cm</Left>
               <Height>0.69476cm</Height>
               <Width>5.58357cm</Width>
               <ZIndex>2</ZIndex>
@@ -670,7 +753,6 @@
                       <Value>پیمانکار:</Value>
                       <Style>
                         <FontFamily>B Nazanin</FontFamily>
-                        <FontSize>11pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
@@ -681,8 +763,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>2.34244cm</Top>
-              <Left>11.97416cm</Left>
+              <Top>2.34245cm</Top>
+              <Left>14.29909cm</Left>
               <Height>0.82705cm</Height>
               <Width>1.52105cm</Width>
               <ZIndex>3</ZIndex>
@@ -706,8 +788,8 @@
                     <TextRun>
                       <Value>=First(Fields!AgreementIDName.Value, "DataSet1")</Value>
                       <Style>
-                        <FontFamily>B Nazanin</FontFamily>
-                        <FontSize>8pt</FontSize>
+                        <FontFamily>B Mitra</FontFamily>
+                        <FontSize>9pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
@@ -718,10 +800,10 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>2.34244cm</Top>
-              <Left>6.23825cm</Left>
+              <Top>2.37773cm</Top>
+              <Left>6.33205cm</Left>
               <Height>0.82705cm</Height>
-              <Width>5.63007cm</Width>
+              <Width>8.12331cm</Width>
               <ZIndex>4</ZIndex>
               <Style>
                 <Border>
@@ -743,20 +825,20 @@
                     <TextRun>
                       <Value>تا تاریخ</Value>
                       <Style>
-                        <FontFamily>B Nazanin</FontFamily>
-                        <FontSize>11pt</FontSize>
+                        <FontFamily>B Mitra</FontFamily>
+                        <FontSize>8pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
                   </TextRuns>
                   <Style>
-                    <TextAlign>Center</TextAlign>
+                    <TextAlign>Left</TextAlign>
                   </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>2.34244cm</Top>
-              <Left>1.89236cm</Left>
+              <Top>2.37773cm</Top>
+              <Left>1.83944cm</Left>
               <Height>0.82705cm</Height>
               <Width>1.3623cm</Width>
               <ZIndex>5</ZIndex>
@@ -780,20 +862,20 @@
                     <TextRun>
                       <Value>از تاریخ</Value>
                       <Style>
-                        <FontFamily>B Nazanin</FontFamily>
-                        <FontSize>11pt</FontSize>
+                        <FontFamily>B Mitra</FontFamily>
+                        <FontSize>8pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
                   </TextRuns>
                   <Style>
-                    <TextAlign>Center</TextAlign>
+                    <TextAlign>Left</TextAlign>
                   </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>2.34244cm</Top>
-              <Left>4.7228cm</Left>
+              <Top>2.36558cm</Top>
+              <Left>4.68752cm</Left>
               <Height>0.82705cm</Height>
               <Width>1.46814cm</Width>
               <ZIndex>6</ZIndex>
@@ -817,8 +899,8 @@
                     <TextRun>
                       <Value>=First(Fields!todatefarsi.Value, "DataSet1")</Value>
                       <Style>
-                        <FontFamily>B Nazanin</FontFamily>
-                        <FontSize>11pt</FontSize>
+                        <FontFamily>B Mitra</FontFamily>
+                        <FontSize>8pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
@@ -829,8 +911,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>2.34244cm</Top>
-              <Left>0.26458cm</Left>
+              <Top>2.36558cm</Top>
+              <Left>0.08908cm</Left>
               <Height>0.82705cm</Height>
               <Width>1.62689cm</Width>
               <ZIndex>7</ZIndex>
@@ -854,8 +936,8 @@
                     <TextRun>
                       <Value>=First(Fields!fromdatefarsi.Value, "DataSet1")</Value>
                       <Style>
-                        <FontFamily>B Nazanin</FontFamily>
-                        <FontSize>11pt</FontSize>
+                        <FontFamily>B Mitra</FontFamily>
+                        <FontSize>8pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
@@ -866,8 +948,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>2.34244cm</Top>
-              <Left>3.23702cm</Left>
+              <Top>2.36558cm</Top>
+              <Left>3.2723cm</Left>
               <Height>0.82705cm</Height>
               <Width>1.41522cm</Width>
               <ZIndex>8</ZIndex>

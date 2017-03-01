@@ -34,7 +34,7 @@ cmd.Parameters.Add(new SqlParameter("SuperVisorID", SqlDbType.Int)).Value =Secur
 cmd.Parameters.Add(new SqlParameter("FineMeterOrRepeat", SqlDbType.Int)).Value =Securenamespace.SecureData.CheckSecurity(c.FineMeterOrRepeat);
 cmd.Parameters.Add(new SqlParameter("FineFactor", SqlDbType.NVarChar)).Value =Securenamespace.SecureData.CheckSecurity(c.FineFactor);
 cmd.Parameters.Add(new SqlParameter("JarimeComment", SqlDbType.NVarChar)).Value = Securenamespace.SecureData.CheckSecurity(c.JarimeComment);
-cmd.Parameters.Add(new SqlParameter("unitNumberNazer", SqlDbType.Int)).Value = c.unitNumberNazer ;
+cmd.Parameters.Add(new SqlParameter("unitNumberNazer", SqlDbType.Decimal)).Value = c.unitNumberNazer ;
 cmd.Parameters.Add(new SqlParameter("commentdarsad", SqlDbType.NVarChar)).Value = c.commentdarsad;
 
 
@@ -79,7 +79,7 @@ cmd.Parameters.Add(new SqlParameter("commentdarsad", SqlDbType.NVarChar)).Value 
             cmd.Parameters.Add(new SqlParameter("AgreementID", SqlDbType.Int)).Value = Securenamespace.SecureData.CheckSecurity(c.AgreementID);
             cmd.Parameters.Add(new SqlParameter("ExplainID", SqlDbType.Int)).Value = Securenamespace.SecureData.CheckSecurity(c.ExplainID);
             cmd.Parameters.Add(new SqlParameter("VisitDate", SqlDbType.NVarChar)).Value = Securenamespace.SecureData.CheckSecurity(c.VisitDate);
-            cmd.Parameters.Add(new SqlParameter("UnitNumberPeymankar", SqlDbType.Int)).Value = c.UnitNumberPeymankar;
+            cmd.Parameters.Add(new SqlParameter("UnitNumberPeymankar", SqlDbType.Decimal)).Value = c.UnitNumberPeymankar;
             
 
             SqlParameter prmResult = new SqlParameter("Result", SqlDbType.Int);
@@ -315,7 +315,7 @@ cmd.Parameters.Add(new SqlParameter("commentdarsad", SqlDbType.NVarChar)).Value 
             cmd.Parameters.Add(new SqlParameter("AgreementID", SqlDbType.Int)).Value = Securenamespace.SecureData.CheckSecurity(c.AgreementID);
             cmd.Parameters.Add(new SqlParameter("ExplainID", SqlDbType.Int)).Value = Securenamespace.SecureData.CheckSecurity(c.ExplainID);
             cmd.Parameters.Add(new SqlParameter("VisitDate", SqlDbType.NVarChar)).Value = Securenamespace.SecureData.CheckSecurity(c.VisitDate);
-            cmd.Parameters.Add(new SqlParameter("UnitNumberPeymankar", SqlDbType.Int)).Value = c.UnitNumberPeymankar;
+            cmd.Parameters.Add(new SqlParameter("UnitNumberPeymankar", SqlDbType.Decimal)).Value = c.UnitNumberPeymankar;
 
             SqlParameter prmResult = new SqlParameter("Result", SqlDbType.Int);
             prmResult.Direction = ParameterDirection.Output;
