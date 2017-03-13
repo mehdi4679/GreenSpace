@@ -209,7 +209,7 @@
         <asp:BoundField DataField="AgreementIDName"  HeaderText="قرارداد"   SortExpression="AgreementIDName" />
         <asp:BoundField DataField="ExplainName"  HeaderText="شرح کار"   SortExpression="ExplainName" />
         <asp:TemplateField HeaderText="تعداد واحد"   SortExpression="unitNumberNazer"><ItemTemplate>
-        <asp:Label  runat="server" ID="txtunitNumberNazer"  Text='<%# Eval("unitNumberNazer").ToString() %>' ></asp:Label>
+        <asp:Label  runat="server" ID="txtunitNumberNazerhistory"  Text='<%# Eval("unitNumberNazer").ToString() %>' ></asp:Label>
  
         </ItemTemplate></asp:TemplateField>
         <asp:BoundField DataField="commentdarsad"   HeaderText="توضیحات"   SortExpression="commentdarsad" />
